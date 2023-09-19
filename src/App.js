@@ -4,9 +4,11 @@ function App() {
       <header className="App-header">
         <h1>Catalogue des Diagrammes</h1>
       </header>
+
       <body>
         <div className="App-sidebar">
-          <a>Diagrammes UML</a> 
+        <button type="button" class="collapsible">&#62;</button><a>Diagrammes UML</a> 
+        <button type="button" class="collapsible">&#62;</button><a>Diagrammes de structure</a> 
           <a>Classe</a> 
           <a>Composants</a> 
           <a>Déploiement</a> 
@@ -14,7 +16,7 @@ function App() {
           <a>Paquetage</a> 
           <a>Profil</a> 
           <a>Structure composite</a> 
-          <a>Diagrammes comportementaux</a> 
+          <button type="button" class="collapsible">&#62;</button><a>Diagrammes comportementaux</a> 
           <a>Cas d’utilisation</a> 
           <a>Activité</a> 
           <a>État</a> 
@@ -22,24 +24,25 @@ function App() {
           <a>Communication</a> 
           <a>Présentation des interactions</a> 
           <a>Diagramme de temps</a> 
-          <a>Diagrammes MERISE</a> 
-          <a>Niveau conceptuel</a> 
+          <button type="button" class="collapsible">&#62;</button><a>Diagrammes MERISE</a> 
+          <button type="button" class="collapsible">&#62;</button><a>Niveau conceptuel</a> 
           <a>Modèle Conceptuel des Données (MCD)</a> 
           <a>Modèle Conceptuel de Traitements (MCT)</a> 
-          <a>Niveau organisationnel</a> 
+          <button type="button" class="collapsible">&#62;</button><a>Niveau organisationnel</a> 
           <a>Modèle Organisationnel des Données (MLD)</a> 
           <a>Modèle Organisationnel de Traitements (MLT)</a> 
-          <a>Niveau logique</a> 
+          <button type="button" class="collapsible">&#62;</button><a>Niveau logique</a> 
           <a>Modèle Logique des Données (MLD)</a> 
           <a>Modèle Logique de Traitements (MLT)</a> 
-          <a>Niveau physique</a> 
+          <button type="button" class="collapsible">&#62;</button><a>Niveau physique</a> 
           <a>Modèle Physique des Données (MPD)</a> 
           <a>Modèle Physique de Traitements (MPT)</a> 
-          <a>Autres modèles</a> 
+          <button type="button" class="collapsible">&#62;</button><a>Autres modèles</a> 
           <a>Modèle des Flux (MF)</a> 
           <a>Modèle des États (ME)</a> 
           <a>Modèle de Sécurité (MS)</a> 
         </div>
+  
         <div className="App-body">
           <h2>Diagrammes UML</h2>
           <ul>
