@@ -35,6 +35,29 @@ body {
   color: #454545
 }
 
+.App-body {
+  position: row;
+  margin-left: 240px;
+}
+
+.App-sidebar {
+  margin: 0;
+  padding: 0;
+  width: 220px;
+  font-size: calc(1px + 2vmin);
+  flex-direction: row;
+  position: fixed;
+  height: 100%;
+  overflow: auto;
+}
+
+.App-sidebar a {
+  display: block;
+  color: black;
+  padding: 2px;
+  text-decoration: none;
+}
+
 .Section {
   font-family: 'SF Pro Dislay Bold';
 }
