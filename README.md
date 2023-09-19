@@ -30,7 +30,7 @@ Diagramme de temps
 **MCD**
 MCT
 
-## Niveau logique
+### Niveau logique
 
 **MLD**
 MLT
