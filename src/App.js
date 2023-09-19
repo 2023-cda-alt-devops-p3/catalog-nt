@@ -7,9 +7,11 @@ function App() {
       <body>
         <h2>Diagrammes UML</h2>
         <ul>
-          <li>Diagrammes de structure</li>
+          <li className="Section">Diagrammes de structure</li>
           <ol>
             <li>Classe</li>
+            <p>Ce type d’exemples de diagrammes UML est souvent appelé le fondement principal de toute solution orientée objet. Son utilisation est pour la modélisation conceptuelle de la structure réelle du système et la modélisation détaillée. Il est également possible avec les diagrammes de classes de faire de la modélisation des données.
+Dans ce diagramme, les classes sont divisées en trois compartiments contenus dans une boîte. Le nom doit être en haut, suivi des attributs au milieu et des opérations en bas.</p>
             <li>Composants</li>
             <li>Déploiement</li>
             <li>Objets</li>
@@ -17,7 +19,7 @@ function App() {
             <li>Profil</li>
             <li>Structure composite</li>
           </ol>
-          <li>Diagrammes comportementaux</li>
+          <li className="Section">Diagrammes comportementaux</li>
           <ol>
             <li>Cas d’utilisation</li>
             <li>Activité</li>
@@ -30,27 +32,27 @@ function App() {
         </ul>
         <h2>Diagrammes MERISE</h2>
         <ul>
-          <li>Niveau conceptuel</li>
+          <li className="Section">Niveau conceptuel</li>
           <ol>
             <li>Modèle Conceptuel des Données (MCD)</li>
             <li>Modèle Conceptuel de Traitements (MCT)</li>
           </ol>
-          <li>Niveau organisationnel</li>
+          <li className="Section">Niveau organisationnel</li>
           <ol>
             <li>Modèle Organisationnel des Données (MLD)</li>
             <li>Modèle Organisationnel de Traitements (MLT)</li>
           </ol>
-          <li>Niveau logique</li>
+          <li className="Section">Niveau logique</li>
           <ol>
             <li>Modèle Logique des Données (MLD)</li>
             <li>Modèle Logique de Traitements (MLT)</li>
           </ol>
-          <li>Niveau physique</li>
+          <li className="Section">Niveau physique</li>
           <ol>
             <li>Modèle Physique des Données (MPD)</li>
             <li>Modèle Physique de Traitements (MPT)</li>
           </ol>
-          <li>Autres modèles</li>
+          <li className="Section">Autres modèles</li>
           <ol>
             <li>Modèle des Flux (MF)</li>
             <li>Modèle des États (ME)</li>
