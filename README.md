@@ -6,7 +6,7 @@
 
 - **Classe**
 - Composants
-- Déploiement
+- **Déploiement**
 - Objets
 - Paquetage
 - Profil
@@ -16,7 +16,7 @@
 ### Diagrammes comportementaux
 
 - **Cas d’utilisation**
-- Activité
+- **Activité**
 - État
 - **Séquence**
 - Communication
@@ -27,10 +27,11 @@
 
 ### Niveau conceptuel
 
-- **MCD**
-- MCT
+- **Modèle Conceptuel des Données (MCD)**
+- **Modèle Physique des Données (MPD)**
+- Modèle Conceptuel de Traitements (MCT)
 
 ### Niveau logique
 
-- **MLD**
-- MLT
+- **Modèle Logique des Données (MLD)**
+- Modèle Logique de Traitements (MLT)
