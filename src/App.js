@@ -115,16 +115,33 @@ function Sidebar() {
     <a href='#uml' className='sideTitle'>Diagrammes UML</a>
     <Accordion1 />
     <Accordion2 />
-    
     <a href='#mer' className='sideTitle'>Diagrammes MERISE</a>
     <Accordion3 />
     <Accordion4 />
     <Accordion5 />
     <Accordion6 />
     <Accordion7 />
-  </div>
-
+  </div>  
   )
+}
+
+function Topbar() {
+  return(
+  <p>Test</p>
+  )
+}
+
+function Navbar() {
+  const [width, setWidth] = React.useState(window.innerWidth);
+  const breakpoint = 768;
+
+  React.useEffect(() => {
+    const handleWindowResize = () => setWidth(window.innerWidth)
+    window.addEventListener("resize", handleWindowResize);
+    return () => window.removeEventListener("resize", handleWindowResize);
+  }, []);
+
+  return width < breakpoint ? <Topbar /> : <Sidebar />;
 }
 
 function AppContent() {
@@ -193,7 +210,7 @@ function App() {
   return (
     <div className="App">
       <body>       
-        <Sidebar />
+        <Navbar />
         <AppContent />
       </body>
     </div>
