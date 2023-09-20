@@ -24,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: left;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(2.2vmin);
   color: #454545;
 }
 
@@ -32,65 +32,75 @@ body {
   text-align: left;
 }
 
-.App-header {
-  background-color: #ffffff;
-  min-height: 10vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: #454545
-}
-
 .App-body {
   position: row;
-  margin-left: 240px;
+  margin-left: 320px;
 }
 
 .App-sidebar {
   margin: 0;
   padding: 0;
-  width: 220px;
+  width: 300px;
   font-family: 'SF Pro Text Light';
   font-size: calc(1.7vmin);
-  flex-direction: column;
   position: fixed;
   height: 100%;
   overflow: auto;
 }
 
-.App-sidebar a {
+.accordion {
+  display:flex;
+  align-content: center;
+}
+
+.sideTitle {
+  font-family: 'SF Pro Text Medium';
+  color: #a1a1a1;
+  margin-left: 25px;
+  text-decoration: none;
+}
+
+.sideMenu {
+  font-family: 'SF Pro Text Medium';
   display:block;
   color: black;
   padding: 2px;
-  padding-left: 30px;
   text-decoration: none;
+}
+
+.collapsible {
+  display:block;
+  color: black;
+  background:none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.App-sidebar a {
+  display:block;
+  padding: 3px;
+  text-decoration: none;
+}
+
+.App-sidebar a:hover {
+  color: #E79057;
+}
+
+.collapsible-content {
+  padding-left: 25px;
+}
+
+.collapsible-content a {
+  color:black;
 }
 
 .Section {
   font-family: 'SF Pro Dislay Bold';
 }
 
-.collapsible {
-  display:flex;
-  color: black;
-  background-color:none;
-  border: none;
-  outline: none;
-  font-size: 15px;
-  cursor: pointer;
-}
-
-.collapsible-content {
-  padding: 0 18px;
-  background-color: white;
-  display: none;
-  overflow: hidden;
-}
-
 p {
-  font-size: calc(5px + 2vmin);
+  font-size: calc(2vmin);
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 100;
 }
@@ -129,7 +139,7 @@ ol li {
 ol li::before {
   content: counter(custom-counter);
   color: #E79057;
-  font-size: calc(5px + 2vmin);
+  font-size: calc(2vmin);
   font-weight: bold;
   position: absolute;
   --size: 32px;

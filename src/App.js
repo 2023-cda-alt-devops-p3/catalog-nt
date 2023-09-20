@@ -4,16 +4,17 @@ function Accordion1() {
   const [isActive, setIsActive] = useState(false);
   return(
   <div>
-    <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? 'v' : '>'}</button><a href='#uml-structure'>Diagrammes de structure</a>
-    {isActive && <div>
-      <a href='#uml-class'>Classe</a> 
-      <a href='#uml-comp'>Composants</a> 
-      <a href='#uml-deploy'>Déploiement</a> 
-      <a href='#uml-objects'>Objets</a> 
-      <a href='#uml-package'>Paquetage</a> 
-      <a href='#uml-profile'>Profil</a> 
-      <a href='#uml-composite'>Structure composite</a>
-    </div>}
+    <div className="accordion">
+      <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu' href='#uml-structure'>Diagrammes de structure</a></div>
+      {isActive && <div class='collapsible-content'>
+        <a href='#uml-class'>Classe</a> 
+        <a href='#uml-comp'>Composants</a> 
+        <a href='#uml-deploy'>Déploiement</a> 
+        <a href='#uml-objects'>Objets</a> 
+        <a href='#uml-package'>Paquetage</a> 
+        <a href='#uml-profile'>Profil</a> 
+        <a href='#uml-composite'>Structure composite</a>
+      </div>}
   </div>
   )
 }
@@ -22,15 +23,16 @@ function Accordion2() {
   const [isActive, setIsActive] = useState(false);
   return(
   <div>
-    <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? 'v' : '>'}</button><a href='#uml-behave'>Diagrammes comportementaux</a>
-    {isActive && <div>
-    <a href='#uml-cases'>Cas d’utilisation</a> 
-    <a href='#uml-activity'>Activité</a> 
-    <a href='#uml-state'>État</a> 
-    <a href='#uml-sequence'>Séquence</a> 
-    <a href='#uml-comm'>Communication</a> 
-    <a href='#uml-interactions'>Présentation des interactions</a> 
-    <a href='#uml-time'>Diagramme de temps</a> 
+    <div className="accordion">
+      <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu'  href='#uml-behave'>Diagrammes comportementaux</a></div>
+      {isActive && <div class='collapsible-content'>
+      <a href='#uml-cases'>Cas d’utilisation</a> 
+      <a href='#uml-activity'>Activité</a> 
+      <a href='#uml-state'>État</a> 
+      <a href='#uml-sequence'>Séquence</a> 
+      <a href='#uml-comm'>Communication</a> 
+      <a href='#uml-interactions'>Présentation des interactions</a> 
+      <a href='#uml-time'>Diagramme de temps</a> 
     </div>}
   </div>
   )
@@ -40,10 +42,11 @@ function Accordion3() {
   const [isActive, setIsActive] = useState(false);
   return(
   <div>
-    <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? 'v' : '>'}</button><a href='#mer-concept'>Niveau conceptuel</a>
-    {isActive && <div>
-    <a href='#mer-mcd'>Modèle Conceptuel des Données (MCD)</a> 
-    <a href='#mer-mct'>Modèle Conceptuel de Traitements (MCT)</a> 
+    <div className="accordion">
+      <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu'  href='#mer-concept'>Niveau conceptuel</a></div>
+      {isActive && <div class='collapsible-content'>
+      <a href='#mer-mcd'>Modèle Conceptuel des Données (MCD)</a> 
+      <a href='#mer-mct'>Modèle Conceptuel de Traitements (MCT)</a> 
     </div>}
   </div>
   )
@@ -53,8 +56,9 @@ function Accordion4() {
   const [isActive, setIsActive] = useState(false);
   return(
   <div>
-    <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? 'v' : '>'}</button><a href='#mer-orga'>Niveau organisationnel</a>
-    {isActive && <div>
+  <div className="accordion">
+    <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu' href='#mer-orga'>Niveau organisationnel</a></div>
+    {isActive && <div class='collapsible-content'>
     <a href='#mer-mld'>Modèle Organisationnel des Données (MLD)</a> 
     <a href='#mer-mlt'>Modèle Organisationnel de Traitements (MLT)</a> 
     </div>}
@@ -66,10 +70,11 @@ function Accordion5() {
   const [isActive, setIsActive] = useState(false);
   return(
   <div>
-    <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? 'v' : '>'}</button><a href='#mer-logic'>Niveau logique</a>
-    {isActive && <div>
-    <a href='#mer-mld'>Modèle Logique des Données (MLD)</a> 
-    <a href='#mer-mlt'>Modèle Logique de Traitements (MLT)</a> 
+    <div className="accordion">
+      <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu' href='#mer-logic'>Niveau logique</a></div>
+      {isActive && <div class='collapsible-content'>
+      <a href='#mer-mld'>Modèle Logique des Données (MLD)</a> 
+      <a href='#mer-mlt'>Modèle Logique de Traitements (MLT)</a> 
     </div>}
   </div>
   )
@@ -79,10 +84,11 @@ function Accordion6() {
   const [isActive, setIsActive] = useState(false);
   return(
   <div>
-    <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? 'v' : '>'}</button><a href='#mer-phys'>Niveau physique</a>
-    {isActive && <div>
-    <a href='#mer-mld'>Modèle Physique des Données (MPD)</a> 
-    <a href='#mer-mlt'>Modèle Physique de Traitements (MPT)</a> 
+    <div className="accordion">
+      <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu'  href='#mer-phys'>Niveau physique</a></div>
+      {isActive && <div class='collapsible-content'>
+      <a href='#mer-mld'>Modèle Physique des Données (MPD)</a> 
+      <a href='#mer-mlt'>Modèle Physique de Traitements (MPT)</a> 
     </div>}
   </div>
   )
@@ -91,25 +97,26 @@ function Accordion6() {
 function Accordion7() {
   const [isActive, setIsActive] = useState(false);
   return(
-  <div>
-    <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? 'v' : '>'}</button><a href='#mer-other'>Autres modèles</a>
-    {isActive && <div>
-    <a href='#mer-mf'>Modèle des Flux (MF)</a> 
-    <a href='#mer-me'>Modèle des États (ME)</a> 
-    <a href='#mer-ms'>Modèle de Sécurité (MS)</a> 
-    </div>}
-  </div>
+    <div>
+      <div className="accordion">
+        <button onClick={() => setIsActive(!isActive)} class="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu'  href='#mer-other'>Autres modèles</a></div>
+        {isActive && <div class='collapsible-content'>
+        <a href='#mer-mf'>Modèle des Flux (MF)</a> 
+        <a href='#mer-me'>Modèle des États (ME)</a> 
+        <a href='#mer-ms'>Modèle de Sécurité (MS)</a> 
+      </div>}
+    </div>
   )
 }
 
 function Sidebar() {
   return(
   <div className="App-sidebar">
-    <a>Diagrammes UML</a>
+    <a className='sideTitle'>Diagrammes UML</a>
     <Accordion1 />
     <Accordion2 />
     
-    <a>Diagrammes MERISE</a>
+    <a className='sideTitle'>Diagrammes MERISE</a>
     <Accordion3 />
     <Accordion4 />
     <Accordion5 />
