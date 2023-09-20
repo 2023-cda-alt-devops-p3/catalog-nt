@@ -45,16 +45,17 @@ body {
   padding: 0;
   width: 220px;
   font-size: calc(1px + 2vmin);
-  flex-direction: row;
+  flex-direction: column;
   position: fixed;
   height: 100%;
   overflow: auto;
 }
 
 .App-sidebar a {
-  display: block;
+  display:flex;
   color: black;
   padding: 2px;
+  padding-left: 30px;
   text-decoration: none;
 }
 
@@ -63,15 +64,23 @@ body {
 }
 
 .collapsible {
+  display:flex;
+  color: black;
   background-color:none;
   border: none;
-  text-align: left;
   outline: none;
   font-size: 15px;
 }
 
+p {
+  font-size: calc(5px + 2vmin);
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 100;
+}
+
 h1 {
   filter: drop-shadow(0 4px 4px #454545be);
+  padding-left: 60px;
 }
 
 h2 {
@@ -113,14 +122,4 @@ ol li::before {
   background: #e7915734;
   border-radius: 50%;
   text-align:center;
-}
-
-p {
-  font-size: calc(5px + 2vmin);
-  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-  font-weight: 100;
-}
-
-.App-link {
-  color: #61dafb;
 }
