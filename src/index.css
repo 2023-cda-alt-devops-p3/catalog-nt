@@ -17,9 +17,11 @@
 
 .App {
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   text-align: left;
   align-items: center;
+  box-sizing: border-box;
 }
 
 .App-body {
@@ -31,6 +33,14 @@
   font-size: calc(10px + 2vmin);
   color: #454545;
   margin-top: 7vh;
+  flex: 100%;
+  max-width: 100%;
+}
+
+.App-body img {
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%; 
 }
 
 .App-sidebar {
@@ -161,6 +171,9 @@
 p {
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 100;
+  margin-top: 8px;
+  vertical-align: middle;
+  width: 100%;
 }
 
 h1 {
@@ -229,9 +242,21 @@ ol li::before {
 }
 
 @media screen and (min-width: 991px) {
-
   .App-body{
     font-size: calc(2vmin);
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .column {
+    float: left;
+    width: 40%;
+    padding: 10px;
+    height:max-content
   }
   .App-sidebar {
     width: 30vh;

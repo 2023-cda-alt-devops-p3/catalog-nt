@@ -173,14 +173,62 @@ function AppContent() {
         <li id ='uml-structure' className="Section">Diagrammes de structure</li>
         <ol>
           <li id='uml-class'>Classe</li>
+          <div className='row'>
+          <div className='column'>
           <p>Ce type d’exemples de diagrammes UML est souvent appelé le fondement principal de toute solution orientée objet. Son utilisation est pour la modélisation conceptuelle de la structure réelle du système et la modélisation détaillée. Il est également possible avec les diagrammes de classes de faire de la modélisation des données.
 Dans ce diagramme, les classes sont divisées en trois compartiments contenus dans une boîte. Le nom doit être en haut, suivi des attributs au milieu et des opérations en bas.</p>
+          </div> 
+          <div className='column'>
+          <img src='https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/class-diagram.jpg.webp' alt='class diagram example'></img>
+          </div></div>
           <li id='uml-deploy'>Composants</li>
+          <div className='row'>
+          <div className='column'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div> 
+          <div className='column'>
+          <img src='https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/class-diagram.jpg.webp' alt='class diagram example'></img>
+          </div></div>
           <li id='uml-objects'>Déploiement</li>
+          <div className='row'>
+          <div className='column'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div> 
+          <div className='column'>
+          <img src='https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/class-diagram.jpg.webp' alt='class diagram example'></img>
+          </div></div>
           <li id='uml-objects'>Objets</li>
+          <div className='row'>
+          <div className='column'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div> 
+          <div className='column'>
+          <img src='https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/class-diagram.jpg.webp' alt='class diagram example'></img>
+          </div></div>
           <li id='uml-package'>Paquetage</li>
+          <div className='row'>
+          <div className='column'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div> 
+          <div className='column'>
+          <img src='https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/class-diagram.jpg.webp' alt='class diagram example'></img>
+          </div></div>
           <li id='uml-profile'>Profil</li>
+          <div className='row'>
+          <div className='column'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div> 
+          <div className='column'>
+          <img src='https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/class-diagram.jpg.webp' alt='class diagram example'></img>
+          </div></div>
           <li id='uml-composite'>Structure composite</li>
+          <div className='row'>
+          <div className='column'>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+          </div> 
+          <div className='column'>
+          <img src='https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/class-diagram.jpg.webp' alt='class diagram example'></img>
+          </div></div>
         </ol>
         <li id ='uml-behave' className="Section">Diagrammes comportementaux</li>
         <ol>
