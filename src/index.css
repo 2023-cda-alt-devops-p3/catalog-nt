@@ -6,6 +6,17 @@
   font-family: 'SF Pro Dislay Bold';
   src: url("SFPRODISPLAYBOLD.OTF") format("opentype");
 }
+@font-face {
+  font-family: 'SF Pro Text Medium';
+  src: url("SF-Pro-Text-Medium.otf") format("opentype");
+}
+@font-face {
+  font-family: 'SF Pro Text Light';
+  src: url("SF-Pro-Text-Light.otf") format("opentype");
+}
+
+
+
 
 body {
   font-family: 'SF Pro Dislay Regular';
@@ -44,7 +55,8 @@ body {
   margin: 0;
   padding: 0;
   width: 220px;
-  font-size: calc(1px + 2vmin);
+  font-family: 'SF Pro Text Light';
+  font-size: calc(1.7vmin);
   flex-direction: column;
   position: fixed;
   height: 100%;
