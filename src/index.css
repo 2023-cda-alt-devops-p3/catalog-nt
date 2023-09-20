@@ -15,32 +15,29 @@
   src: url("SF-Pro-Text-Light.otf") format("opentype");
 }
 
-body {
+.App {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  align-items: center;
+}
+
+.App-body {
   font-family: 'SF Pro Dislay Regular';
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
-  display: flex;
-  flex-direction: column;
   align-items: left;
-  font-size: calc(2.2vmin);
+  font-size: calc(10px + 2vmin);
   color: #454545;
-}
-
-.App {
-  text-align: left;
-}
-
-.App-body {
-  position: row;
+  margin-top: 7vh;
 }
 
 .App-sidebar {
   margin: 0;
   padding: 0;
-  width: 30vh;
+  width: 0vh;
   font-family: 'SF Pro Text Light';
-  font-size: calc(1.7vmin);
   position: fixed;
   height: 100%;
   overflow: auto;
@@ -93,12 +90,75 @@ body {
   color:#454545;
 }
 
+.App-topbar {
+  background-color: #333;
+  font-family: 'SF Pro Text Light';
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position:fixed;
+  z-index: 1;
+}
+
+.App-topbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+}
+
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  cursor:pointer;
+  margin: 0;
+}
+
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: #E79057;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  float: none;
+  color: #454545;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content{
+  display: block;
+}
+
 .Section {
   font-family: 'SF Pro Dislay Bold';
 }
 
 p {
-  font-size: calc(2vmin);
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 100;
 }
@@ -137,28 +197,44 @@ ol li {
 ol li::before {
   content: counter(custom-counter);
   color: #E79057;
-  font-size: calc(2vmin);
   font-weight: bold;
   position: absolute;
-  --size: 32px;
+  --size: 4vmin;
   left: calc(-1 * var(--size) - 20px);
   width: var(--size);
+  min-width: 3vh;
   height: var(--size);
+  min-height: 3vh;
   background: #e7915734;
   border-radius: 50%;
   text-align:center;
 }
 
-@media screen and (min-width: 576px) {
-
-}
-
 @media screen and (min-width: 768px) {
+  .App {
+    align-items:flex-start;
+  }
   .App-body{
     margin-left: 30vh;
+    margin-top: 0vh;
+    font-size: calc(5px + 2vmin);
+  }
+  .App-sidebar {
+    width: 30vh;
+    font-size: calc(3px + 2vmin);
+  }
+  ol li::before {
+    --size: 3vmin;
   }
 }
 
 @media screen and (min-width: 991px) {
 
+  .App-body{
+    font-size: calc(2vmin);
+  }
+  .App-sidebar {
+    width: 30vh;
+    font-size: calc(2vmin);
+  }
 }
