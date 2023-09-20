@@ -15,9 +15,6 @@
   src: url("SF-Pro-Text-Light.otf") format("opentype");
 }
 
-
-
-
 body {
   font-family: 'SF Pro Dislay Regular';
   -webkit-font-smoothing: antialiased;
@@ -64,7 +61,7 @@ body {
 }
 
 .App-sidebar a {
-  display:flex;
+  display:block;
   color: black;
   padding: 2px;
   padding-left: 30px;
@@ -82,6 +79,14 @@ body {
   border: none;
   outline: none;
   font-size: 15px;
+  cursor: pointer;
+}
+
+.collapsible-content {
+  padding: 0 18px;
+  background-color: white;
+  display: none;
+  overflow: hidden;
 }
 
 p {
