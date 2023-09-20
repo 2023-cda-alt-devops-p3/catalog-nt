@@ -20,7 +20,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
-  min-height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: left;
@@ -34,13 +33,12 @@ body {
 
 .App-body {
   position: row;
-  margin-left: 320px;
 }
 
 .App-sidebar {
   margin: 0;
   padding: 0;
-  width: 300px;
+  width: 30vh;
   font-family: 'SF Pro Text Light';
   font-size: calc(1.7vmin);
   position: fixed;
@@ -63,14 +61,14 @@ body {
 .sideMenu {
   font-family: 'SF Pro Text Medium';
   display:block;
-  color: black;
+  color: #454545;
   padding: 2px;
   text-decoration: none;
 }
 
 .collapsible {
   display:block;
-  color: black;
+  color: #454545;
   background:none;
   border: none;
   outline: none;
@@ -92,7 +90,7 @@ body {
 }
 
 .collapsible-content a {
-  color:black;
+  color:#454545;
 }
 
 .Section {
@@ -149,4 +147,18 @@ ol li::before {
   background: #e7915734;
   border-radius: 50%;
   text-align:center;
+}
+
+@media screen and (min-width: 576px) {
+
+}
+
+@media screen and (min-width: 768px) {
+  .App-body{
+    margin-left: 30vh;
+  }
+}
+
+@media screen and (min-width: 991px) {
+
 }
