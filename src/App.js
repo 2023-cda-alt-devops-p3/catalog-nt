@@ -112,11 +112,11 @@ function Accordion7() {
 function Sidebar() {
   return(
   <div className="App-sidebar">
-    <a className='sideTitle'>Diagrammes UML</a>
+    <a href='#uml' className='sideTitle'>Diagrammes UML</a>
     <Accordion1 />
     <Accordion2 />
     
-    <a className='sideTitle'>Diagrammes MERISE</a>
+    <a href='#mer' className='sideTitle'>Diagrammes MERISE</a>
     <Accordion3 />
     <Accordion4 />
     <Accordion5 />
@@ -131,7 +131,7 @@ function AppContent() {
   return (
     <div className="App-body">
       <h1>Catalogue des Diagrammes</h1>
-      <h2>Diagrammes UML</h2>
+      <h2 id ='uml'>Diagrammes UML</h2>
       <ul>
         <li id ='uml-structure' className="Section">Diagrammes de structure</li>
         <ol>
@@ -156,7 +156,7 @@ Dans ce diagramme, les classes sont divisées en trois compartiments contenus da
           <li id='uml-time'>Diagramme de temps</li>
         </ol>
       </ul>
-      <h2>Diagrammes MERISE</h2>
+      <h2 id ='mer'>Diagrammes MERISE</h2>
       <ul>
         <li id='mer-concept' className="Section">Niveau conceptuel</li>
         <ol>
