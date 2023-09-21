@@ -112,6 +112,7 @@ function Accordion7() {
 function Sidebar() {
   return(
   <div id ="Sidebar" className="App-sidebar">
+    <div className='logosb'><img src='simplon-icon-192.png' alt='logo simplon'></img></div>
     <a href='#uml' className='sideTitle'>Diagrammes UML</a>
     <Accordion1 />
     <Accordion2 />
@@ -147,6 +148,7 @@ function Topbar() {
         <a href='#mer-other'>Autres modèles</a> 
       </div>
     </div>
+    <div className='logotb'><img src='simplon-icon-192.png' width="40" height="40" alt='logo simplon'></img></div>
   </div>
   )
 }
