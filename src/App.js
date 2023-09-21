@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {dataUMLS,dataUMLC,dataMERC,dataMERO,dataMERL,dataMERP,dataMERA} from './data.js';
+import {dataUMLS,dataUMLC,dataMERC,dataMERO,dataMERL,dataMERP} from './data.js';
 
 function Accordion1() {
   const [isActive, setIsActive] = useState(false);
@@ -97,22 +97,6 @@ function Accordion6() {
   )
 }
 
-function Accordion7() {
-  const [isActive, setIsActive] = useState(false);
-  return(
-    <div>
-      <div className="accordion">
-        <button onClick={() => setIsActive(!isActive)} className="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu'  href='#mer-other'>Autres modèles</a></div>
-        {isActive && <div className='collapsible-content'>
-        {dataMERA.map(dcard => (<AccContent
-              dname={dcard.dname}
-              dtag={dcard.dtag}
-          ></AccContent>))}
-      </div>}
-    </div>
-  )
-}
-
 function AccContent({dname,dtag}) {
   return(<a href={`#${dtag}`}>{dname}</a>)
 }
@@ -129,7 +113,6 @@ function Sidebar() {
     <Accordion4 />
     <Accordion5 />
     <Accordion6 />
-    <Accordion7 />
   </div>  
   )
 }
@@ -153,7 +136,6 @@ function Topbar() {
         <a href='#mer-orga'>Mod. organisationnel</a> 
         <a href='#mer-logic'>Mod. logique</a> 
         <a href='#mer-phys'>Mod. physique</a>
-        <a href='#mer-other'>Autres modèles</a> 
       </div>
     </div>
     <div className='logotb'><img src='simplon-icon-192.png' width="40" height="40" alt='logo simplon'></img></div>
@@ -246,15 +228,6 @@ function AppContent() {
         <li id='mer-phys' className="Section">Niveau physique</li>
         <ol>
         {dataMERP.map(dcard => (<DiagramCard
-              dname={dcard.dname}
-              dtag={dcard.dtag}
-              ddesc={dcard.ddesc}
-              ddiag={dcard.ddiag}
-          ></DiagramCard>))}
-        </ol>
-        <li id='mer-other' className="Section">Autres modèles</li>
-        <ol>
-        {dataMERA.map(dcard => (<DiagramCard
               dname={dcard.dname}
               dtag={dcard.dtag}
               ddesc={dcard.ddesc}

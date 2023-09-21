@@ -288,6 +288,7 @@ ol li::before {
   }
   .App-body img {
     padding-left: 2vw;
+    max-width: 60vh;
   }
   .row:after {
     content: "";
