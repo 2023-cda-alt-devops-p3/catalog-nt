@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
-import {dataUMLS,dataUMLC,dataMERC,dataMERO,dataMERL,dataMERP} from './data.js';
+import {dataUMLS,dataUMLC,dataMERC,dataMERO,dataMERL,dataMERP} from './data.js'; /*data containing diagrams infos*/
 
+/*Accordions menus components*/
 function Accordion1() {
   const [isActive, setIsActive] = useState(false);
   return(
@@ -97,10 +98,12 @@ function Accordion6() {
   )
 }
 
+/*Accordions menus content automated builder from data file*/
 function AccContent({dname,dtag}) {
   return(<a href={`#${dtag}`}>{dname}</a>)
 }
 
+/*Sidebar component (only visible on tablet and desktop)*/
 function Sidebar() {
   return(
   <div id ="Sidebar" className="App-sidebar">
@@ -117,6 +120,7 @@ function Sidebar() {
   )
 }
 
+/*Topbar component (only visible on mobile)*/
 function Topbar() {
   return(
   <div className="App-topbar">
@@ -143,6 +147,7 @@ function Topbar() {
   )
 }
 
+/* Width checker for responsive design, display topbar or sidebar*/
 function Navbar() {
   const [width, setWidth] = React.useState(window.innerWidth);
   const breakpoint = 768;
@@ -156,6 +161,7 @@ function Navbar() {
   return width < breakpoint ? <Topbar /> : <Sidebar />;
 }
 
+/* Diagramcard content automated builder from data file */
 function DiagramCard({dname,dtag,ddesc,ddiag}) {
   return(
     <div>
@@ -171,6 +177,7 @@ function DiagramCard({dname,dtag,ddesc,ddiag}) {
   )
 }
 
+/* Main content component */
 function AppContent() {
   return (
     <div className="App-body">
@@ -239,6 +246,7 @@ function AppContent() {
   )
 }
 
+/* Main App component */
 function App() {
   return (
     <div className="App">

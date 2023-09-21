@@ -1,3 +1,4 @@
+/* importing custom fonts */
 @font-face {
 	font-family: 'SF Pro Dislay Regular';
 	src: url("SFPRODISPLAYREGULAR.OTF") format("opentype");
@@ -185,6 +186,7 @@ ol li::before {
   padding: 2px;
   text-decoration: none;
 }
+
 /* topbar */
 .App-topbar {
   background-color: #333;
@@ -257,6 +259,8 @@ ol li::before {
 }
 
 /* media queries */
+
+/* tablet design changes*/
 @media screen and (min-width: 768px) {
   .App {
     align-items:flex-start;
@@ -281,6 +285,7 @@ ol li::before {
   }
 }
 
+/* desktop design changes*/
 @media screen and (min-width: 991px) {
   .App-body{
     font-size: calc(2vmin);
