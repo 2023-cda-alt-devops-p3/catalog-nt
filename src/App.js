@@ -2,106 +2,35 @@ import React, { useState } from 'react';
 import {dataUMLS,dataUMLC,dataMERC,dataMERO,dataMERL,dataMERP} from './data.js'; /*data containing diagrams infos*/
 import ReactMarkdown from 'react-markdown'
 
-/*Accordions menus components*/
-function Accordion1() {
+/* Diagramcard content automated builder from data file */
+function DiagramCard({dname,dtag,ddesc,ddiag}) {
+  return(
+    <div>
+      <li id={dtag}>{dname}</li>
+      <div className='row'>
+        <div className='column'>
+          <p><ReactMarkdown children={ddesc}></ReactMarkdown></p>
+        </div> 
+        <div className='column'>
+          <img src={ddiag} alt={dname}></img>
+      </div></div>
+    </div>
+  )
+}
+
+/*Accordions menus automated builder from data file*/
+function Accordion({title,titlehref,data}) {
   const [isActive, setIsActive] = useState(false);
   return(
-  <div>
+    <div>
     <div className="accordion">
-      <button onClick={() => setIsActive(!isActive)} className="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu' href='#uml-structure'>Diagrammes de structure</a></div>
+      <button onClick={() => setIsActive(!isActive)} className="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu'  href={titlehref}>{title}</a></div>
       {isActive && <div className='collapsible-content'>
-      {dataUMLS.map(dcard => (<AccContent
-              dname={dcard.dname}
-              dtag={dcard.dtag}
-          ></AccContent>))}
-      </div>}
-  </div>
-  )
-}
-
-function Accordion2() {
-  const [isActive, setIsActive] = useState(false);
-  return(
-  <div>
-    <div className="accordion">
-      <button onClick={() => setIsActive(!isActive)} className="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu'  href='#uml-behave'>Diagrammes comportementaux</a></div>
-      {isActive && <div className='collapsible-content'>
-      {dataUMLC.map(dcard => (<AccContent
-              dname={dcard.dname}
-              dtag={dcard.dtag}
-          ></AccContent>))}
+      {data.map(dcard => (<a href={`#${dcard.dtag}`}>{dcard.dname}</a>
+  ))}
     </div>}
-  </div>
+  </div>  
   )
-}
-
-function Accordion3() {
-  const [isActive, setIsActive] = useState(false);
-  return(
-  <div>
-    <div className="accordion">
-      <button onClick={() => setIsActive(!isActive)} className="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu'  href='#mer-concept'>Niveau conceptuel</a></div>
-      {isActive && <div className='collapsible-content'>
-      {dataMERC.map(dcard => (<AccContent
-              dname={dcard.dname}
-              dtag={dcard.dtag}
-          ></AccContent>))}
-    </div>}
-  </div>
-  )
-}
-
-function Accordion4() {
-  const [isActive, setIsActive] = useState(false);
-  return(
-  <div>
-  <div className="accordion">
-    <button onClick={() => setIsActive(!isActive)} className="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu' href='#mer-orga'>Niveau organisationnel</a></div>
-    {isActive && <div className='collapsible-content'>
-    {dataMERO.map(dcard => (<AccContent
-              dname={dcard.dname}
-              dtag={dcard.dtag}
-          ></AccContent>))}
-    </div>}
-  </div>
-  )
-}
-
-function Accordion5() {
-  const [isActive, setIsActive] = useState(false);
-  return(
-  <div>
-    <div className="accordion">
-      <button onClick={() => setIsActive(!isActive)} className="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu' href='#mer-logic'>Niveau logique</a></div>
-      {isActive && <div className='collapsible-content'>
-      {dataMERL.map(dcard => (<AccContent
-              dname={dcard.dname}
-              dtag={dcard.dtag}
-          ></AccContent>))}
-    </div>}
-  </div>
-  )
-}
-
-function Accordion6() {
-  const [isActive, setIsActive] = useState(false);
-  return(
-  <div>
-    <div className="accordion">
-      <button onClick={() => setIsActive(!isActive)} className="collapsible">{isActive ? '▽' : '▷'}</button><a className='sideMenu'  href='#mer-phys'>Niveau physique</a></div>
-      {isActive && <div className='collapsible-content'>
-      {dataMERP.map(dcard => (<AccContent
-              dname={dcard.dname}
-              dtag={dcard.dtag}
-          ></AccContent>))}
-    </div>}
-  </div>
-  )
-}
-
-/*Accordions menus content automated builder from data file*/
-function AccContent({dname,dtag}) {
-  return(<a href={`#${dtag}`}>{dname}</a>)
 }
 
 /*Sidebar component (only visible on tablet and desktop)*/
@@ -110,13 +39,37 @@ function Sidebar() {
   <div id ="Sidebar" className="App-sidebar">
     <div className='logosb'><img src='simplon-icon-192.png' alt='logo simplon'></img></div>
     <a href='#uml' className='sideTitle'>Diagrammes UML</a>
-    <Accordion1 />
-    <Accordion2 />
+    <Accordion
+      title = 'Diagrammes de structure'
+      titlehref= '#uml-structure'
+      data={dataUMLS}
+    ></Accordion>    
+    <Accordion
+      title = 'Diagrammes comportementaux'
+      titlehref= '#uml-behave'
+      data={dataUMLC}
+    ></Accordion>
     <a href='#mer' className='sideTitle'>Diagrammes MERISE</a>
-    <Accordion3 />
-    <Accordion4 />
-    <Accordion5 />
-    <Accordion6 />
+    <Accordion
+      title = 'Niveau conceptuel'
+      titlehref= '#mer-concept'
+      data={dataMERC}
+    ></Accordion>
+    <Accordion
+      title = 'Niveau organisationnel'
+      titlehref= '#mer-orga'
+      data={dataMERO}
+    ></Accordion>
+    <Accordion
+      title = 'Niveau logique'
+      titlehref= '#mer-logic'
+      data={dataMERL}
+    ></Accordion>
+    <Accordion
+      title = 'Niveau physique'
+      titlehref= '#mer-phys'
+      data={dataMERC}
+    ></Accordion>
   </div>  
   )
 }
@@ -160,22 +113,6 @@ function Navbar() {
   }, []);
 
   return width < breakpoint ? <Topbar /> : <Sidebar />;
-}
-
-/* Diagramcard content automated builder from data file */
-function DiagramCard({dname,dtag,ddesc,ddiag}) {
-  return(
-    <div>
-      <li id={dtag}>{dname}</li>
-      <div className='row'>
-        <div className='column'>
-          <p><ReactMarkdown children={ddesc}></ReactMarkdown></p>
-        </div> 
-        <div className='column'>
-          <img src={ddiag} alt={dname}></img>
-      </div></div>
-    </div>
-  )
 }
 
 /* Main content component */
