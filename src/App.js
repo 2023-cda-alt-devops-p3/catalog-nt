@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import {dataUMLS,dataUMLC,dataMERC,dataMERO,dataMERL,dataMERP} from './data.js'; /*data containing diagrams infos*/
+import ReactMarkdown from 'react-markdown'
 
 /*Accordions menus components*/
 function Accordion1() {
@@ -168,7 +169,7 @@ function DiagramCard({dname,dtag,ddesc,ddiag}) {
       <li id={dtag}>{dname}</li>
       <div className='row'>
         <div className='column'>
-          <p>{ddesc}</p>
+          <p><ReactMarkdown children={ddesc}></ReactMarkdown></p>
         </div> 
         <div className='column'>
           <img src={ddiag} alt={dname}></img>

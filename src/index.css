@@ -31,7 +31,6 @@
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #ffffff;
-  align-items: left;
   font-size: calc(10px + 2vmin);
   color: #454545;
   margin-top: 7vh;
@@ -124,7 +123,6 @@ ol li::before {
   position: fixed;
   display: flex;
   flex-direction: column;
-  overflow: auto;
 }
 
 .App-sidebar img {
@@ -259,7 +257,6 @@ ol li::before {
 }
 
 /* media queries */
-
 /* tablet design changes*/
 @media screen and (min-width: 768px) {
   .App {
@@ -272,7 +269,9 @@ ol li::before {
   }
   .App-sidebar {
     width: 30vh;
+    height: 100%;
     font-size: calc(3px + 2vmin);
+    overflow-y: auto;
   }
   ul li {
     font-size: calc(3vmin);
