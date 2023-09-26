@@ -6,8 +6,10 @@ export const dataUMLS = [
 ### Description
 Le diagramme de Classe est très utilisé comme base structurelle, et est le plus répandu pour représenter un modèle orientée objet. Il permet de montrer une vue statique des différentes 
 classes ou objets du systèmes, avec ses attributs, ses méthodes, ses relations et ses contraintes avec les autres objets.
+
 ### Mode d'emploi
 Chaque classe est représentée par une forme rectangulaire qui comporte les points suivants :
+
 * **Partie haute** : Contient le nom de la classe. Il doit être centré, écrit en gras, et sa première lettre doit être en majuscule.
 * **Partie centrale** : Contient les attributs. Ils doivent être nommé selon leur usage dans la classe. Leur accessibilité peut être indiqué en rajoutant un symbole de visibilité :  
 **+** pour publique, **-** pour privée, **#** pour protégée, et **~** pour le package.
@@ -39,6 +41,7 @@ Une classe peut également être abstraite, auquel cas aucun objet ne peut être
 fonctionnalités aux autres classes. Pour noter une classe comme abstraite, son nom doit être écrit en italique.
 
 A noter qu'en plus des classes, ce diagramme peut également représenter des interfaces, des types de données, ou des composants.
+
 ### Ressources
 [Wikipedia](https://fr.wikipedia.org/wiki/Diagramme_de_classes) / [javapoint](https://www.javatpoint.com/uml-class-diagram) / [IBM](https://developer.ibm.com/articles/the-class-diagram/)
 `,
@@ -52,14 +55,30 @@ A noter qu'en plus des classes, ce diagramme peut également représenter des in
 Le diagramme de Composants décrit le système comme un ensemble de composants réutilisables, ainsi que leurs relations de dépendance. Il ressemble beaucoup au diagramme de Classe, cependant
 un composant répond bien mieux aux problématiques de réutilisation qu'une classe. En effet, cette dernière propose des connexions figées et des méthodes spécialisées, alors qu'un composant
 est définit par un concept plus large, intégré dans des systèmes et sous-systèmes, et dont les fonctionnalités vont être génériques pour être le plus facilement réutilisable.
+
 ### Mode d'emploi
-Un composant est représenté par un rectangle avec à l'intérieur le nom de celui-ci, et sur son côté gauche deux rectangles plus petits protubérant. Son fonctionnement interne n'est pas 
+Un composant est représenté par un rectangle avec à l'intérieur le nom de celui-ci précédé des deux-points *:* et sur son côté gauche deux rectangles plus petits protubérant. Son fonctionnement interne n'est pas 
 détaillé contrairement à une classe. L'important se situe donc dans ses interfaces et ses ports, qui représentent les relations avec les autres composants :
-* **Interface offerte** : 
-* **Interface requise** :
+
+* **Interface offerte** : Une interface que le composant peut fournir à un autre.  
+Elle est représentée par un court segment terminé par un cercle complet. Le nom de l'interface est écrit au-dessus du segment.
+* **Interface requise** : Une interface dont le composant a besoin pour fonctionner.  
+Elle est représentée par un court segment terminé par un demi-cercle ouvert. Le nom de l'interface est écrit au-dessus du segment.
+
+Ces composants peuvent être intégrés dans des sous-sytèmes, représentés par des rectangles à l'intérieur desquels sont placés ses composants. Les différents sous-systèmes font partis d'un
+même environnement et peuvent être liés. On utilise alors un port, représenté par un carré vide situé à cheval sur la bordure du système, afin de signifier qu'une interface intéragit avec son
+environnement.  Deux types de liens avec l'environnement existent :
+* **Dépendance** : Si un sous-système est dépendant d'un autre, les interfaces et les ports correspondant à cette relation seront reliés par une flèche en pointillé sur le diagramme.
+* **Délégation** : Si un sous-système a une interface dont l'implémentation se situe en dehors de l'environnement actuel, on crée alors un connecteur de délégation, représenté par une 
+flèche en trait plein pointant vers un port dont l'interface n'est reliée à rien.
+
+Une autre notation des composants et sous-systèmes consistent en un rectangle avec une icône de classeur dans le coin supérieur droit. On inscrit également le type, composant ou sous-système,
+entre guillemets *<< >>* afin de bien les différencier. Plus rarement, les interfaces peuvent être représentées de cette manière, auquel cas elles détaillent les fonctions qui les composent.
+
 ### Ressources
+[IBM](https://developer.ibm.com/articles/the-component-diagram/) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-composants-deploiement#fig_composant_05)
 `,
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/component-diagram-1.jpg.webp'
+        ddiag: require('./png/umlcomponent.png')
     },
     {
         dname: 'Déploiement',
