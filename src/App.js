@@ -116,11 +116,36 @@ function Navbar() {
 }
 
 /* Main content component */
+
+const umlintro = `
+**UML**, qui signifie *Unified Model Language* ou *Langage de Modélisation Unifié* en français, est un **moyen de visualiser une application ou un logiciel** 
+en utilisant des différents types de **diagrammes**. A sa création, c'est une synthèse de langages de modélisation antérieurs issue des travaux de **Grady Booch, James Rumbaugh, 
+et Ivar Jacobson**, qui ont normalisé ce nouveau langage en janvier 1997.  
+Aujourd'hui, l'UML est accepté et reconnu par l'*Object Management Group* (OML), un consortium d'acteurs de l'informatique,
+comme le **standard dans le développement et la modélisation d'application et de logiciel**. Le détail des spécifications est d'ailleurs visible 
+[directement sur leur site](https://www.omg.org/spec/UML/).    
+
+
+Le principe clé de n'importe quel diagramme UML est de **connecter des formes** qui représentent **un objet ou une classe** avec d'autres formes pour **illustrer leurs relations** ainsi que le flux 
+d'informations et de données. De manière générale, ils sont séparés en deux catégories : Diagrammes de **structure** et diagrammes **comportementaux**.
+`
+
+const meriseintro = `
+**Merise** est une méthode de modélisation introduite dans les années 80, suite aux réflexions de **René Colletii, Anrold Rochfeld, et Hubert Tardieu**, qui souhaitaient développer un nouveau **modèle relationnel 
+standardisé**. Il est majoritairement **utilisé en France** pour la simple et bonne raison que c'est le ministère de l'industrie lui-même qui a demandé à l'époque aux services publics et aux entreprises du secteur de l'utiliser. Son
+nom vient de l'analogie avec le **merisier**, un arbre *"qui ne peut porter de beaux fruits qui si on lui greffe une branche de cerisier"*,  comparant ainsi le succès d'une méthodologie informatique à la condition 
+qu'elle se greffe correctement à l'organisation pour laquelle elle est développée.
+
+C'est une méthode qui sépare et modélise d'un côté le **flux des données**, et de l'autres le **flux des traitements et processus**. Elle est particulièrement adaptée dans le cadre de modélisation de tableaux relationnels
+ et notamment **des bases de données**. Le document de référence le plus pertinent reste le livre écrit par ses créateurs, trouvable avec son numéro [ISBN 978-2-7081-2473](https://www.google.com/search?q=ISBN+978-2-7081-2473).
+`
+
 function AppContent() {
   return (
     <div className="App-body">
       <h1>Catalogue des Diagrammes</h1>
       <h2 id ='uml'>Diagrammes UML</h2>
+      <ReactMarkdown children={umlintro} />
       <ul>
         <li id ='uml-structure' className="Section">Diagrammes de structure</li>
         <ol>
@@ -142,6 +167,7 @@ function AppContent() {
         </ol>
       </ul>
       <h2 id ='mer'>Diagrammes MERISE</h2>
+      <ReactMarkdown children={meriseintro} />
       <ul>
         <li id='mer-concept' className="Section">Niveau conceptuel</li>
         <ol>

@@ -30,12 +30,6 @@ export const dataUMLS = [
         ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/package-1-1.jpg.webp'
     },
     {
-        dname: 'Profil',
-        dtag: 'uml-profile',
-        ddesc: 'Le diagramme de profil est l’un de ces types de diagramme UML créé dans un package de profil. Les profils servent à étendre l’UML, qui est basé sur davantage de stéréotypes ajoutés et de valeurs balisées qui sont appliquées aux éléments, aux composants et aux connecteurs.',
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/profile-diagram-1.jpg.webp'
-    },
-    {
         dname: 'Structure composite',
         dtag: 'uml-composite',
         ddesc: 'Un diagramme de structure composite est un type de diagramme structurel utilisé pour montrer la structure interne d’un classificateur, les interactions du qualificatif avec l’environnement via les ports et le comportement de la collaboration.',
@@ -81,7 +75,7 @@ export const dataUMLS = [
         ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/interaction-diagram-1.jpg.webp'
     },
     {
-        dname: 'Diagramme de temps',
+        dname: 'Temps',
         dtag: 'uml-time',
         ddesc: 'Un diagramme structurel qui représente le changement d’état ou de valeur d’un ou plusieurs objets sur un certain temps. Ce type de diagramme se compose principalement d’une ligne de vie, d’une chronologie d’état, d’une contrainte de durée, d’une contrainte de temps et d’une occurrence de destruction.',
         ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/timing-diagram-1.jpg.webp'

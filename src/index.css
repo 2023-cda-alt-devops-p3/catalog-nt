@@ -33,8 +33,9 @@
   background-color: #ffffff;
   font-size: calc(10px + 2vmin);
   color: #454545;
-  margin-top: 7vh;
-  margin-right: 60px;
+  margin-top: 50px;
+  padding-left: 30px;
+  padding-right: 30px;
   flex: 100%;
   max-width: 100%;
 }
@@ -46,11 +47,7 @@
   width: 100%; 
 }
 
-.Section {
-  font-family: 'SF Pro Dislay Bold';
-}
-
-p {
+.App-body p {
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 100;
   margin-top: 8px;
@@ -59,22 +56,41 @@ p {
   width: 100%;
 }
 
-h1 {
+.App-body a {
+  color: #E79057;
+  text-decoration: none;
+}
+
+.App-body a:hover {
+  color: #E79057;
+  text-decoration: underline;
+}
+
+.Section {
+  font-family: 'SF Pro Dislay Bold';
+}
+
+.App-body ol p {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight: 100;
+  margin-top: 8px;
+  vertical-align: middle;
+  text-align: justify;
+  width: 100%;
+}
+
+.App-body h1 {
   filter: drop-shadow(0 4px 4px #454545be);
   padding-left: 60px;
   text-align: center;
 }
 
-h2 {
+.App-body h2 {
   text-align: center;
   padding-left: 60px;
 }
 
-li {
-  text-align: center;
-}
-
-ul {
+.App-body ul {
   list-style: none;
   padding-left: 60px;
 }
@@ -307,10 +323,10 @@ ol li::before {
   .App-sidebar {
     font-size: calc(2vmin);
   }
-  h1 {
+  .App-body h1 {
       text-align: left;
   }
-  h2 {
+  .App-body h2 {
     text-align: left;
   }
   li {
