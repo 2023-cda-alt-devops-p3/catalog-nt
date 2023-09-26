@@ -3,6 +3,7 @@ import {dataUMLS,dataUMLC,dataMERC,dataMERO,dataMERL,dataMERP} from './data.js';
 import ReactMarkdown from 'react-markdown'
 
 /* Diagramcard content automated builder from data file */
+
 function DiagramCard({dname,dtag,ddesc,ddiag}) {
   return(
     <div>
@@ -13,12 +14,14 @@ function DiagramCard({dname,dtag,ddesc,ddiag}) {
         </div> 
         <div className='column'>
           <img src={ddiag} alt={dname}></img>
+          <figcaption>Exemple de diagramme de {dname}</figcaption>
       </div></div>
     </div>
   )
 }
 
 /*Accordions menus automated builder from data file*/
+
 function Accordion({title,titlehref,data}) {
   const [isActive, setIsActive] = useState(false);
   return(
@@ -34,6 +37,7 @@ function Accordion({title,titlehref,data}) {
 }
 
 /*Sidebar component (only visible on tablet and desktop)*/
+
 function Sidebar() {
   return(
   <div id ="Sidebar" className="App-sidebar">
@@ -75,6 +79,7 @@ function Sidebar() {
 }
 
 /*Topbar component (only visible on mobile)*/
+
 function Topbar() {
   return(
   <div className="App-topbar">
@@ -102,6 +107,7 @@ function Topbar() {
 }
 
 /* Width checker for responsive design, display topbar or sidebar*/
+
 function Navbar() {
   const [width, setWidth] = React.useState(window.innerWidth);
   const breakpoint = 768;
@@ -126,17 +132,18 @@ comme le **standard dans le développement et la modélisation d'application et 
 [directement sur leur site](https://www.omg.org/spec/UML/).    
 
 
-Le principe clé de n'importe quel diagramme UML est de **connecter des formes** qui représentent **un objet ou une classe** avec d'autres formes pour **illustrer leurs relations** ainsi que le flux 
-d'informations et de données. De manière générale, ils sont séparés en deux catégories : Diagrammes de **structure** et diagrammes **comportementaux**.
+Le principe clé de n'importe quel diagramme UML est de **connecter des formes** qui représentent **un objet ou une classe** avec d'autres formes pour **illustrer leurs relations** 
+ainsi que le flux d'informations et de données. De manière générale, ils sont séparés en deux catégories : Diagrammes de **structure** et diagrammes **comportementaux**.
 `
 
 const meriseintro = `
-**Merise** est une méthode de modélisation introduite dans les années 80, suite aux réflexions de **René Colletii, Anrold Rochfeld, et Hubert Tardieu**, qui souhaitaient développer un nouveau **modèle relationnel 
-standardisé**. Il est majoritairement **utilisé en France** pour la simple et bonne raison que c'est le ministère de l'industrie lui-même qui a demandé à l'époque aux services publics et aux entreprises du secteur de l'utiliser. Son
-nom vient de l'analogie avec le **merisier**, un arbre *"qui ne peut porter de beaux fruits qui si on lui greffe une branche de cerisier"*,  comparant ainsi le succès d'une méthodologie informatique à la condition 
-qu'elle se greffe correctement à l'organisation pour laquelle elle est développée.
+**Merise** est une méthode de modélisation introduite dans les années 80, suite aux réflexions de **René Colletti, Anrold Rochfeld, et Hubert Tardieu**, qui souhaitaient développer 
+un nouveau **modèle relationnel standardisé**. elle est majoritairement **utilisée en France** pour la simple et bonne raison que c'est le ministère de l'industrie lui-même qui a 
+demandé à l'époque aux services publics et aux entreprises du secteur de l'utiliser.  
+Son nom vient de l'analogie avec le **merisier**, un arbre *"qui ne peut porter de beaux fruits que si on lui greffe une branche de cerisier"*,  comparant ainsi le succès d'une méthodologie 
+informatique à la condition qu'elle se greffe correctement à l'organisation pour laquelle elle est développée.
 
-C'est une méthode qui sépare et modélise d'un côté le **flux des données**, et de l'autres le **flux des traitements et processus**. Elle est particulièrement adaptée dans le cadre de modélisation de tableaux relationnels
+C'est une méthode qui modélise des **systèmes d'informations**, en séparant d'un côté le **flux des données**, et de l'autres le **flux des traitements et processus**. Elle est particulièrement adaptée dans le cadre de modélisation de tableaux relationnels
  et notamment **des bases de données**. Le document de référence le plus pertinent reste le livre écrit par ses créateurs, trouvable avec son numéro [ISBN 978-2-7081-2473](https://www.google.com/search?q=ISBN+978-2-7081-2473).
 `
 
@@ -211,6 +218,7 @@ function AppContent() {
 }
 
 /* Main App component */
+
 function App() {
   return (
     <div className="App">

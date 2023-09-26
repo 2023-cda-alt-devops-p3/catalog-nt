@@ -57,7 +57,7 @@ Demo : https://catalog-nt.netlify.app/
 
 ## Git
 - [:heavy_check_mark:] Versionné régulièrement et de manière atomique (Plusieurs "commit" par jour pendant toute la durée du projet) => Vérif Git
-- [:x:] Historique de commit propre => (éviter les doublons, les commits inutiles)
+- [:heavy_check_mark:] Historique de commit propre => (éviter les doublons, les commits inutiles)
 - [:heavy_check_mark:] Mise en plance d'une branche de développement supplémentaire, voire plusieurs selon l'architecture du site => Vérif sur Git
 - [:x:] Fonction "pull request" => Check sur Github
 - [:x:] Mise en place un Github Action (automatisation de tests intégration, vulnérabilité, ...) => Check sur Github
@@ -75,7 +75,7 @@ Demo : https://catalog-nt.netlify.app/
 ## Performance
 - [:x:] Bon résultat sur PageSpeed Insights
 - [:x:] Optimisation images (surtout mobile)
-- [:x:] Limiter le nombre de requêtes
+- [:heavy_check_mark:] Limiter le nombre de requêtes
 
 ## Accessibilité
 - [:x:] Accessibilité : title, aria-label, alt

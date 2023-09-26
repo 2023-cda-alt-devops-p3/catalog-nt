@@ -11,6 +11,9 @@
 # production
 /build
 
+#svg
+/src/svg
+
 # misc
 .DS_Store
 .env.local

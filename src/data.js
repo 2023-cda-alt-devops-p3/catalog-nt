@@ -2,13 +2,63 @@ export const dataUMLS = [
     {
         dname: 'Classe',
         dtag: 'uml-class',
-        ddesc: `Ce type d’exemples de diagrammes UML est souvent appelé le fondement principal de toute solution orientée objet. Son utilisation est pour la modélisation conceptuelle de la structure réelle du système et la modélisation détaillée. Il est également possible avec les diagrammes de classes de faire de la modélisation des données. Dans ce diagramme, les classes sont divisées en trois compartiments contenus dans une boîte. Le nom doit être en haut, suivi des attributs au milieu et des opérations en bas.`,
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/class-diagram.jpg.webp'
+        ddesc: `
+### Description
+Le diagramme de Classe est très utilisé comme base structurelle, et est le plus répandu pour représenter un modèle orientée objet. Il permet de montrer une vue statique des différentes 
+classes ou objets du systèmes, avec ses attributs, ses méthodes, ses relations et ses contraintes avec les autres objets.
+### Mode d'emploi
+Chaque classe est représentée par une forme rectangulaire qui comporte les points suivants :
+* **Partie haute** : Contient le nom de la classe. Il doit être centré, écrit en gras, et sa première lettre doit être en majuscule.
+* **Partie centrale** : Contient les attributs. Ils doivent être nommé selon leur usage dans la classe. Leur accessibilité peut être indiqué en rajoutant un symbole de visibilité :  
+**+** pour publique, **-** pour privée, **#** pour protégée, et **~** pour le package.
+* **Partie basse** : Contient les méthodes. Elles doivent être représentées sous forme de liste, où chaque méthode est écrite sur une ligne.
+
+Une fois les classes en place, il faut définir les relations entre elles à l'aide de segments qui représentent les différents types de relations :
+* **Héritage** : Relation parent / enfant, qui hérite alors des attributs et méthodes de sa classe parente, sauf si elles sont privées.  
+Représenté par un segment terminé par une flèche triangulaire, celle-ci indiquant le parent.
+* **Association** : Connexion sémantique entre deux classes, par exemple si l'une fait appel à la méthode d'une autre. Ces connexions peuvent être :  
+• Uni-directionnelle, représenté par un segment fléché.  
+• Bi-directionnelles, représenté par un trait simple.  
+• Une interdiction d'association, représenté par une croix sur le segment.
+* **Dépendence** : Lien faible sémantique entre deux classes ou plus, ou le changement sur l'une cause un changement chez les autres.
+Représenté par un segment en pointillé fléché.
+
+En plus de ces règles de base, des particularités peuvent se rajouter :
+
+* **Multiplicité** : Une valeur de multiplicité peut être rajouté aux relations, à côté de la classe et du segment. Elle indique combien d'instances de cette classe peuvent être
+rattachées à l'autre classe.  
+Pour une valeur fixe, un nombre suffit. Sinon on note le minimum et le maximum (*"0..1"* pour un min. de 0 et un max. de 1 par exemple).
+* **Agrégation** : Cas particulier d'une relation d'héritage, où la classe enfant existe indépendamment de son parent.  
+Si l'un est supprimé, l'autre continue d'exister.  
+Représenté par un segment terminé par un losange sans remplissage.
+* **Composition** : Cas particulier d'une relation d'agrégation, où les classes parents et enfants sont entièrement liées.  
+Si l'une est supprimée, alors l'autre aussi.  
+Représenté par une segment terminé par une losange plein.
+
+Une classe peut également être abstraite, auquel cas aucun objet ne peut être directement instanciée ou déclarée depuis celle-ci. Elle peut être utilisée pour diffuser des
+fonctionnalités aux autres classes. Pour noter une classe comme abstraite, son nom doit être écrit en italique.
+
+A noter qu'en plus des classes, ce diagramme peut également représenter des interfaces, des types de données, ou des composants.
+### Ressources
+[Wikipedia](https://fr.wikipedia.org/wiki/Diagramme_de_classes) / [javapoint](https://www.javatpoint.com/uml-class-diagram) / [IBM](https://developer.ibm.com/articles/the-class-diagram/)
+`,
+        ddiag: require('./png/umlclass.png')
     },
     {
         dname: 'Composants',
         dtag: 'uml-comp',
-        ddesc: 'Le diagramme des composants illustre la manière dont les composants sont combinés pour créer des composants plus volumineux. Ces types de diagrammes sont utiles pour travailler sur des systèmes complexes comportant de nombreux composants. Les composants se relaient les uns aux autres grâce à l’utilisation d’interfaces, qui sont ensuite reliées à l’aide de connecteurs.',
+        ddesc: `
+### Description
+Le diagramme de Composants décrit le système comme un ensemble de composants réutilisables, ainsi que leurs relations de dépendance. Il ressemble beaucoup au diagramme de Classe, cependant
+un composant répond bien mieux aux problématiques de réutilisation qu'une classe. En effet, cette dernière propose des connexions figées et des méthodes spécialisées, alors qu'un composant
+est définit par un concept plus large, intégré dans des systèmes et sous-systèmes, et dont les fonctionnalités vont être génériques pour être le plus facilement réutilisable.
+### Mode d'emploi
+Un composant est représenté par un rectangle avec à l'intérieur le nom de celui-ci, et sur son côté gauche deux rectangles plus petits protubérant. Son fonctionnement interne n'est pas 
+détaillé contrairement à une classe. L'important se situe donc dans ses interfaces et ses ports, qui représentent les relations avec les autres composants :
+* **Interface offerte** : 
+* **Interface requise** :
+### Ressources
+`,
         ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/component-diagram-1.jpg.webp'
     },
     {
