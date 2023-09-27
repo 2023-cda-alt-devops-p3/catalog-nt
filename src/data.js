@@ -127,8 +127,27 @@ Représenté par un segment terminé par une flèche triangulaire vide pointant 
     {
         dname: 'Objets',
         dtag: 'uml-objects',
-        ddesc: 'Ce diagramme fonctionne en montrant une vue complète ou partielle de la formation du système modélisé à un moment donné. L’objectif de ce diagramme est centré sur un ensemble particulier d’objets et d’attributs, et les liens qui y sont liés. Le diagramme d’objets est quelque peu identique au diagramme de classes car les deux peuvent être utilisés pour visualiser la structure spécifique d’un système. Cependant, le diagramme d’objets montre souvent des instances des classes, tandis que les classes sont ce que le diagramme de classes est censé faire.',
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/object-diagram-1.jpg.webp'
+        ddesc: `
+### Description
+Ce diagramme permet de visualiser un système à moment figé dans le temps. Les différents systèmes sont alors instanciés, et on peut explorer leur comportement dans un état précis. La 
+représentation de ce diagramme est identique à celle d'un [diagramme de Classes](#uml-class), si ce n'est que les différentes classes sont instanciées. Une utilisation répandue et de faire
+deux diagrammes d'objets, avant et après une interaction avec le système, afin d'en voir l'évolution.
+
+### Mode d'emploi
+L'usage est le même que pour un [diagramme de Classes](#uml-class), avec quelques modifications :
+
+* La partie basse qui contient les méthodes n'est plus utile, on en laisse le contenu vide.
+* On précède le nom de la classe du nom de l'objet instancié suivi de deux points */:*, et on souligne le tout.
+* Dans la partie centrale, les attributs reçoivent des valeurs. Si tous les attributs ne sont pas renseignées, l'objet est dit *partiellement défini*.
+* Toutes les relations deviennent des liens simples, représentés par un trait plein.
+
+Un diagramme d'Objet peut être utilisé pour représenter une exception non prévue dans le cadre du diagramme de Classes associé, et peut donc ne pas respecter ou ajouter des règles 
+établies dans le représentation générale.
+
+### Ressources
+[Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_d%27objets) / [IBM](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-object) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-classes#L3-5)
+`,
+        ddiag: require('./png/umlobjects.png')
     },
     {
         dname: 'Paquetage',
