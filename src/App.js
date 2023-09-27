@@ -11,7 +11,7 @@ function DiagramCard({dname,dtag,ddesc,ddiag}) {
       <div className='row'>
         <div className='column'>
           <p><ReactMarkdown children={ddesc}></ReactMarkdown></p>
-        </div> 
+        </div>
         <div className='column'>
           <img src={ddiag} alt={dname}></img>
           <figcaption>Exemple de diagramme de {dname}</figcaption>
@@ -223,6 +223,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <header></header>
       <AppContent />
     </div>
   );
