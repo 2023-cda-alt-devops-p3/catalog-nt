@@ -152,8 +152,34 @@ Un diagramme d'Objet peut être utilisé pour représenter une exception non pr�
     {
         dname: 'Paquetage',
         dtag: 'uml-package',
-        ddesc: 'Le diagramme Package est un diagramme structurel qui affiche la disposition des éléments du modèle dans un projet de moyenne à grande échelle. Ce diagramme est principalement utilisé dans les systèmes à grande échelle pour prévoir les dépendances entre les éléments clés du système.',
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/package-1-1.jpg.webp'
+        ddesc: `
+### Description
+En UML, un Paquetage correspond à un regroupement d'éléments, qui peuvent être des classes, des objets, des noeuds, ou d'autres types d'éléments trouvables en langage UML. Ces paquetages
+peuvent ensuite s'imbriquer dans d'autres paquetages, s'organisant ainsi de manière hiérarchique, et fournissant un espace de nom pour les identifier. Cette organisation peut représenter
+ les différentes couches du code d'une application, ou pour regrouper les composants en fonction de leur propriétaire et/ou de leur réutilisation. 
+
+Lorsque l'on rajoute des relations entre ces différents paquetages, on obtient alors un diagramme de Paquetage.
+
+### Mode d'emploi
+Un paquetage est représenté par un rectangle contenant les éléments que le compose, surmonté d'une étiquette contenant l'intitulé de l'espace de nom.
+
+Les relations entre paquetages ressemblent à une relation de Dépendance classique comme vue dans les [diagrammes de Composants](#uml-comp), mais peuvent adopter des formes particulières :
+* **Utilisation** : Cas par défaut d'une relation de Dépendance.
+Représenté par une flèche en pointillé surmontée du terme *« use »*.
+* **Import** :  Les noms des membres de paquetage de paquetage cible sont importés dans l'espace de nom.  
+Représenté par une flèche en pointillé.  
+Si le terme *« import »* est annoté, alors l'import est spécifié comme public.  
+Si le terme *« access »* est annoté,  alors l'import est spécifié comme privé
+* **Merge** : Le contenu du paquetage est étendu à celui de l'autre paquetage, de manière similaire à une relation d'Héritage, sauf qu'ici un nouveau paquetage est créé comme étant
+la fusion des deux. Si deux éléments dans le paquetage ont le même nom, leur définition sera également étendue.  
+Représenté par une flèche en pointillé surmontée du terme *« merge »*.
+
+Il est possible de détailler encore plus chaque espace de nom en listant les éléments qu'il comporte à l'intérieur de celui-ci.
+
+### Ressources
+[Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_des_paquetages) / [uml-diagrams.org](https://www.uml-diagrams.org/package-diagrams-overview.html)
+`,
+        ddiag: require('./png/umlpackage.png')
     },
     {
         dname: 'Structure composite',
