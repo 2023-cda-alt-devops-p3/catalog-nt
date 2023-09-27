@@ -137,7 +137,7 @@ deux diagrammes d'objets, avant et après une interaction avec le système, afin
 L'usage est le même que pour un [diagramme de Classes](#uml-class), avec quelques modifications :
 
 * La partie basse qui contient les méthodes n'est plus utile, on en laisse le contenu vide.
-* On précède le nom de la classe du nom de l'objet instancié suivi de deux points */:*, et on souligne le tout.
+* On précède le nom de la classe du nom de l'objet instancié séparés par les deux points *:*, et on souligne le tout.
 * Dans la partie centrale, les attributs reçoivent des valeurs. Si tous les attributs ne sont pas renseignées, l'objet est dit *partiellement défini*.
 * Toutes les relations deviennent des liens simples, représentés par un trait plein.
 

@@ -50,6 +50,7 @@
 .App-body figcaption {
   text-align: center;
   font-style: italic;
+  margin-bottom: 20px;
 }
 
 .App-body p {
@@ -77,13 +78,13 @@
 
 .App-body h1 {
   filter: drop-shadow(0 4px 4px #454545be);
-  padding-left: 60px;
+  padding-left: 0px;
   text-align: center;
 }
 
 .App-body h2 {
   text-align: center;
-  padding-left: 60px;
+  padding-left: 0px;
 }
 
 .App-body h3 {
@@ -98,7 +99,7 @@
 
 .App-body ul {
   list-style: none;
-  padding-left: 60px;
+  padding-left: 20px;
 }
 
 ul li {
@@ -305,12 +306,16 @@ ol ul li::before {
     margin-top: 0vh;
     font-size: calc(5px + 2vmin);
   }
+  .App-body ul {
+    padding-left: 60px;
+  }
   .App-sidebar {
     width: 30vh;
     height: 100%;
     font-size: calc(3px + 2vmin);
     overflow-y: auto;
   }
+
   ul li {
     font-size: calc(3vmin);
   }
