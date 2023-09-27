@@ -52,9 +52,10 @@ A noter qu'en plus des classes, ce diagramme peut également représenter des in
         dtag: 'uml-comp',
         ddesc: `
 ### Description
-Le diagramme de Composants décrit le système comme un ensemble de composants réutilisables, ainsi que leurs relations de dépendance. Il ressemble beaucoup au diagramme de Classe, cependant
-un composant répond bien mieux aux problématiques de réutilisation qu'une classe. En effet, cette dernière propose des connexions figées et des méthodes spécialisées, alors qu'un composant
-est définit par un concept plus large, intégré dans des systèmes et sous-systèmes, et dont les fonctionnalités vont être génériques pour être le plus facilement réutilisable.
+Le diagramme de Composants décrit le système comme un ensemble de composants réutilisables, ainsi que leurs relations de dépendance. C'est un vue statique d'ensemble, et ressemble en cela
+ beaucoup au diagramme de Classe. Cependant un composant répond bien mieux aux problématiques de réutilisation qu'une classe. En effet, cette dernière propose des connexions figées 
+ et des méthodes spécialisées, alors qu'un composant est défini par un concept plus large, intégré dans des systèmes et sous-systèmes, et dont les fonctionnalités vont être génériques 
+ pour être le plus facilement réutilisable.
 
 ### Mode d'emploi
 Un composant est représenté par un rectangle avec à l'intérieur le nom de celui-ci précédé des deux-points *:* et sur son côté gauche deux rectangles plus petits protubérant. Son fonctionnement interne n'est pas 
@@ -73,7 +74,7 @@ environnement.  Deux types de liens avec l'environnement existent :
 flèche en trait plein pointant vers un port dont l'interface n'est reliée à rien.
 
 Une autre notation des composants et sous-systèmes consistent en un rectangle avec une icône de classeur dans le coin supérieur droit. On inscrit également le type, composant ou sous-système,
-entre guillemets *<< >>* afin de bien les différencier. Plus rarement, les interfaces peuvent être représentées de cette manière, auquel cas elles détaillent les fonctions qui les composent.
+entre guillemets *«* *»* afin de bien les différencier. Plus rarement, les interfaces peuvent être représentées de cette manière, auquel cas elles détaillent les fonctions qui les composent.
 
 ### Ressources
 [IBM](https://developer.ibm.com/articles/the-component-diagram/) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-composants-deploiement#fig_composant_05)
@@ -83,8 +84,45 @@ entre guillemets *<< >>* afin de bien les différencier. Plus rarement, les inte
     {
         dname: 'Déploiement',
         dtag: 'uml-deploy',
-        ddesc: 'Le prochain exemple UML est le diagramme de déploiement. Ce type de diagramme montre la disposition physique des artefacts sur les nœuds. Les diagrammes de déploiement sont considérés comme pertinents dans le cas où votre solution logicielle est distribuée sur différentes machines, chacune ayant une configuration distincte.',
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/deployment-diagram-1.jpg.webp'
+        ddesc: `
+### Description
+Là où d'autres diagrammes UML s'attellent à décrire les composants logiques d'un système, le diagramme de Déploiement représente quant à lui la manière dont sont connectés les éléments
+physiques, comme par exemple un logiciel, un capteur, un serveur, ou un ordinateur. L'architecture visualisée est particulièrement adaptée à des systèmes embarquées qui utilisent du
+hardware contrôlé par des stimuli externes, comme des capteurs, ou plus simplement pour des modèles client/serveur qui font la distinction entre l'interface utilisateur et les données
+persistentes d'un système. 
+
+### Mode d'emploi
+Il est important de commencer par identifier en premier les éléments généraux d'un système, puis ensuite d'ajouter les relations entre eux appelées chemins de communication et représentées 
+par un trait plein, ce qui signifie que les deux éléments reliés échangent des informations et des signaux. Ces éléments sont :
+
+* **Noeud** : Ressource matérielle ou logicielle, qui peut exécuter des composants ou des sous-systèmes.  
+Représenté par une boîte rectangulaire en relief
+* **Dispositif** : Type particulier de noeud, un dispositif est une ressource physique de calcul dans un système, comme un serveur d'application.  
+Représenté de la même manière qu'un noeud.
+
+Ensuite, on peut rajouter dans ces systèmes les éventuels sous-systèmes qu'ils utilisent ou exécutent, qui peuvent eux-même contenir d'autres éléments. On en retrouve plusieurs types :
+
+* **Artefact** : Unité d'implémentation physique, tel qu'un exécutable, une librairie, des documents, ou des bases de données.  
+Représenté par un rectangle avec un symbole de page de document dans le coin supérieur droit.
+* **Composant** : Elément logiciel, semblable à ceux décrit dans le [diagramme de Composants](#uml-comp) et représenté de la même manière.  
+* **Spécification de déploiement** : Fichier de configuration qui spécifie comment doit être déployer un artefact dans un noeud.  
+Représenté par un rectangle sur fond sombre et texte en blanc.
+
+Pour tous les éléments, on spécifie son type en haut entre guillemets *«* *»* suivi de son nom.  
+
+Pour finir, on ajoute les liens entre ces sous-systèmes qui peuvent prendre plusieurs formes :
+
+* **Association** : Indique qu'une instance d'un élément est connectée à une instance d'un autre élément.  
+Représenté par un trait plein.
+* **Dépendance** : Si un sous-système est dépendant d'un autre, ils seront reliés par une flèche en pointillé.
+* **Généralisation** : Similaire à une relation d'héritage d'un [diagramme de Classe](#uml-class), elle indique une relation parent / enfant entre deux sous-systèmes.  
+Représenté par un segment terminé par une flèche triangulaire vide pointant vers le parent.
+
+### Ressources
+[Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_de_d%C3%A9ploiement) / [Creately](https://creately.com/blog/fr/uncategorized-fr/tutoriel-sur-le-diagramme-de-deploiement/) / 
+[IBM](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-deployment) / [UML-diagrams.org](https://www.uml-diagrams.org/deployment-diagrams-overview.html)
+`,
+        ddiag: require('./png/umldeploy.png')
     },
     {
         dname: 'Objets',
