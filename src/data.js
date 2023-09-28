@@ -232,9 +232,15 @@ Des détails supplémentaires peuvent être rajoutés, comme la notion d'acteur 
 Un diagramme d'Activité sert à modéliser les comportements d'un système ou d'un cas d'utilisation sous forme d'une **séquence d'actions**. Différents comportements peuvent être représentés en parallèle, permettant ainsi de proposer une représentation visuelle de **systèmes complexes** facilement compréhensible même pour des non-informaticiens. D'ailleurs ce diagramme peut servir pour des cas de **flux de travail** plus généraux que du développement de logiciel ou d'application.
 
 ### Mode d'emploi
-En premier lieu, il est nécessaire d'identifier les différentes **étapes d'action**, qui peuvent prendre plusieurs formes :
+En premier lieu, il est nécessaire d'identifier les différentes **étapes d'action** :
 * **Action** : Activité ou changement d'état dans la séquence.  
 Représenté par un rectangle aux coins arrondis dans lequel se trouve le nom d'action.
+* **Initial/Final** : Noeud marquant le point d'appel et de fin des flux. Une activité peut avoir plusieurs point initiaux, mais un seul point final.  
+Représenté par un disque plein pour le point initial, entouré d'un cercle pour le point final.  
+Si le point final ne termine qu'un seul flux et pas l'ensemble de l'activité, il est représenté par un disque barré d'une croix.
+
+Ensuite, il faut spécifier les cas où le flux se retrouve dans des situations particulières où plusieurs actions sont possibles, ou bien si plusieurs actions amènent vers le même résultat :
+
 * **Décision** : Branche d'activité conditionnelle avec une entrée et plusieurs sorties.  
 Représentée par un losange, dans lequel est parfois écrite la condition en question.
 * **Fusion** : Branche d'activité où se rejoigne plusieurs entrées un une seule sortie.
@@ -243,9 +249,6 @@ Représentée également par un losange.
 Représenté par une large barre.
 * **Union** : Point où un plusieurs flux sont synchronisés en un seul.
 Représenté par une large barre.
-* **Initial/Final** : Noeud marquant le point d'appel et de fin des flux. Une activité peut avoir plusieurs point initiaux, mais un seul point final.  
-Représenté par un disque plein pour le point initial, entouré d'un cercle pour le point final.  
-Si le point final ne termine qu'un seul flux et pas l'ensemble de l'activité, il est représenté par un disque barré d'une croix.
 
 Pour passer d'une étape à une autre, on les relie avec une **transition**, représentée par une flèche en trait plein. Les transitions démarrent dès lors que l'action qui la précède est terminée, ce qui provoque automatiquement le début de la prochaine action.
 
@@ -259,10 +262,40 @@ Il est également possible de **partitionner** les noeuds d'activités en les re
         ddiag: require('./png/umlactivity.png')
     },
     {
-        dname: 'État',
+        dname: 'État-transitions',
         dtag: 'uml-state',
-        ddesc: 'Le diagramme de machine d’état est un type d’UML qui montre le comportement d’un objet spécifique, indiquant la séquence d’événements que l’objet subit tout au long de sa durée de vie. Ce diagramme est également appelé diagramme d’états, diagramme d’états ou machine à états. Consultez le diagramme ci-dessous pour plus d’exemples de diagrammes UML.',
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/state-diagram.jpg.webp'
+        ddesc: `
+### Description
+Dérivé du concept d'*automate fini* en mathématique, l'idée du diagramme d'Etats-transitions est de décrire le **comportement interne** d'un appareil, d'un programme, ou de tout autre processus technique, à l'aide d'éléments pouvant se trouver dans un **nombre limités d'états**, et où les transitions entre ces états sont **précisément définies**. Cela signifie que les comportements des éléments ne peuvent pas sortir des scénarii prévus pour eux. Les **transitions** quand à elle sont les réactions à des **évènements** qui sont le moteur de l'évolution du système. Cette approche peut permettre de simplifier énormément le nombre de chemins d'exécution et de conditions testées dans le code. A l'inverse, si elle est utilisée pour un système qui ne ressemble pas à un automate fini, cela va complexifier excessivement le code.
+
+### Mode d'emploi
+
+Il faut commencer par identifier les principaux **états** qui composent notre objet :
+
+* **État élémentaire** : Résultante d'un évènement qui fait évoluer un objet vers un état spécifique.  
+Représenté par un rectangle aux coins arrondis.
+* **État composite** : Décomposition en régions d'un état contenant plusieurs sous-état.  
+Représenté par un cadre qui englobe d'autres états élémentaires, avec son nom écrit dans un compartiment en haut du cadre.
+* **État Initial/Final** : Indique l'état de départ de l'objet lorsque le diagramme d'états-transitions démarre, et l'état final lorsqu'il est terminé.
+Représenté par un disque plein pour l'état initial, entouré d'un cercle pour l'état final.  
+
+L'**évolution** de ces états est alors indiqué comme suit :
+
+* **Transition** : Indication d'un changement d'un état vers un autre.  
+Représenté par une flèche en trait plein.
+* **Événement** : Instance qui déclenche une transition.  
+Représenté par une étiquette au-dessus de la transition associée.
+* **Garde** : Condition qui autorise ou non une transition.  
+Représentée par la définition de la condition écrite au-dessus de la transition gardée.
+
+De même que dans le [diagramme d'Activité](#uml-activity), l'évolution du système peut rencontrer des situations ou **plusieurs transitions sont possibles**, auquel cas on utilise la même notation que dans les diagrammes d'Activité.
+
+Une notion de **concurrence** peut rentrer en jeu lorsque, pour le même état initial, plusieurs flux d'exécution peuvent avoir lieu en parallèle, avec chacun son état initial et final. L'état composite qui regroupe ces flux n'est considéré comme terminé que lorsque l'ensemble des flux ont atteint leur état final. On représente cette concurrence avec un **trait en pointillé** séparant l'état composite entre les différents flux.
+
+### Ressources
+[Wikipédia](https://en.wikipedia.org/wiki/UML_state_machine) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-etats-transitions#L5-6-5) / [Lucidchart](https://www.lucidchart.com/pages/uml-state-machine-diagram?)
+`,
+        ddiag: require('./png/umlstate.png')
     },
     {
         dname: 'Séquence',
