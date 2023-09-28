@@ -298,9 +298,23 @@ Une notion de **concurrence** peut rentrer en jeu lorsque, pour le même état i
         ddiag: require('./png/umlstate.png')
     },
     {
+        dname: 'Interactions',
+        dtag: 'uml-interactions',
+        ddesc: 'Ce type de diagramme comportemental détaille l’image globale du flux de contrôle de l’interaction spécifique. Le diagramme de vue d’ensemble des interactions est considéré comme une variante du diagramme d’activités puisque les sujets sont les occurrences d’interaction.',
+        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/interaction-diagram-1.jpg.webp'
+    },
+    {
         dname: 'Séquence',
         dtag: 'uml-sequence',
-        ddesc: 'Un diagramme de séquence est un type de diagramme UML qui montre comment une opération. Ce diagramme se concentre sur le temps car il affiche l’ordre d’interaction graphiquement via l’axe vertical pour représenter le temps.',
+        ddesc: `
+### Description
+Le but d'un diagramme de Séquence est de définir la suite d'évènements qui va permettre d'accomplir l'objectif désiré d'un système. Il s'attarde moins sur les interactions en elles-même, mais plutôt sur l' ordre dans lequel elles surviennent. C'est un diagramme souvent utilisé en complément du [diagramme des Cas d'utilisation](#uml-cases) durant la phase d'identification des besoins, et qui permet d'avoir une vue plus globale de la séquence des évènements qu'avec un [diagramme d'états-transitions](#uml-state) par exemple.
+
+### Mode d'emploi
+
+### Ressources
+        
+`,
         ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/sequence-diagram-1.jpg.webp'
     },
     {
@@ -308,12 +322,6 @@ Une notion de **concurrence** peut rentrer en jeu lorsque, pour le même état i
         dtag: 'uml-comm',
         ddesc: 'Ce diagramme s’appelait auparavant le diagramme de collaboration, mais il est ensuite devenu un diagramme de communication. Le diagramme de communication est en quelque sorte similaire au diagramme de séquence, mais il se concentre davantage sur la relation des objets. Montrer comment ils se rapportent et se connectent via des messages dans une scène plutôt que des interactions.',
         ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/communication-diagram-1.jpg.webp'
-    },
-    {
-        dname: 'Présentation des interactions',
-        dtag: 'uml-interactions',
-        ddesc: 'Ce type de diagramme comportemental détaille l’image globale du flux de contrôle de l’interaction spécifique. Le diagramme de vue d’ensemble des interactions est considéré comme une variante du diagramme d’activités puisque les sujets sont les occurrences d’interaction.',
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/interaction-diagram-1.jpg.webp'
     },
     {
         dname: 'Temps',
