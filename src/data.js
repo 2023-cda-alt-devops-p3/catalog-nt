@@ -4,7 +4,7 @@ export const dataUMLS = [
         dtag: 'uml-class',
         ddesc: `
 ### Description
-Le diagramme de Classe est très utilisé comme base structurelle, et est le plus répandu pour représenter un modèle orientée objet. Il permet de montrer une vue statique des différentes classes ou objets du systèmes, avec ses attributs, ses méthodes, ses relations et ses contraintes avec les autres objets.
+Le diagramme de Classe est très utilisé comme **base structurelle**, et est le plus répandu pour représenter un **modèle orientée objet**. Il permet de montrer une vue statique des différentes **classes ou objets** du systèmes, avec ses attributs, ses méthodes, ses relations et ses contraintes avec les autres objets.
 
 ### Mode d'emploi
 Chaque classe est représentée par une forme rectangulaire qui comporte les points suivants :
@@ -14,7 +14,7 @@ Chaque classe est représentée par une forme rectangulaire qui comporte les poi
 **+** pour publique, **-** pour privée, **#** pour protégée, et **~** pour le package.
 * **Partie basse** : Contient les méthodes. Elles doivent être représentées sous forme de liste, où chaque méthode est écrite sur une ligne.
 
-Une fois les classes en place, il faut définir les relations entre elles à l'aide de segments qui représentent les différents types de relations :
+Une fois les classes en place, il faut définir les **relations** entre elles à l'aide de segments qui représentent les différents types de relations :
 * **Héritage/Généralisation** : Relation parent / enfant, qui hérite alors des attributs et méthodes de sa classe parente, sauf si elles sont privées.  
 Représenté par un segment terminé par une flèche triangulaire, celle-ci indiquant le parent.
 * **Association** : Connexion sémantique entre deux classes, par exemple si l'une fait appel à la méthode d'une autre. Ces connexions peuvent être :  
@@ -35,9 +35,9 @@ Représenté par un segment terminé par un losange sans remplissage.
 Si l'une est supprimée, alors l'autre aussi.  
 Représenté par une segment terminé par une losange plein.
 
-Une classe peut également être abstraite, auquel cas aucun objet ne peut être directement instanciée ou déclarée depuis celle-ci. Elle peut être utilisée pour diffuser des fonctionnalités aux autres classes. Pour noter une classe comme abstraite, son nom doit être écrit en italique.
+Une classe peut également être **abstraite**, auquel cas aucun objet ne peut être directement instanciée ou déclarée depuis celle-ci. Elle peut être utilisée pour diffuser des fonctionnalités aux autres classes. Pour noter une classe comme abstraite, son nom doit être écrit en italique.
 
-A noter qu'en plus des classes, ce diagramme peut également représenter des interfaces, des types de données, ou des composants.
+A noter qu'en plus des classes, ce diagramme peut également représenter des **interfaces**, des **types de données**, ou des **composants**.
 
 ### Ressources
 [Wikipedia](https://fr.wikipedia.org/wiki/Diagramme_de_classes) / [javapoint](https://www.javatpoint.com/uml-class-diagram) / [IBM](https://developer.ibm.com/articles/the-class-diagram/)
@@ -49,17 +49,18 @@ A noter qu'en plus des classes, ce diagramme peut également représenter des in
         dtag: 'uml-comp',
         ddesc: `
 ### Description
-Le diagramme de Composants décrit le système comme un ensemble de composants réutilisables, ainsi que leurs relations de dépendance. C'est un vue statique d'ensemble, et ressemble en cela beaucoup au diagramme de Classe. Cependant un composant répond bien mieux aux problématiques de réutilisation qu'une classe. En effet, cette dernière propose des connexions figées et des méthodes spécialisées, alors qu'un composant est défini par un concept plus large, intégré dans des systèmes et sous-systèmes, et dont les fonctionnalités vont être génériques  pour être le plus facilement réutilisable.
+Le diagramme de Composants décrit le système comme un **ensemble de composants réutilisables**, ainsi que leurs **relations de dépendance**. C'est un vue statique d'ensemble, et ressemble en cela beaucoup au diagramme de Classe. Cependant un composant répond bien mieux aux problématiques de **réutilisation** qu'une classe. En effet, cette dernière propose des connexions figées et des méthodes spécialisées, alors qu'un composant est défini par un **concept plus large**, intégré dans des systèmes et sous-systèmes, et dont les fonctionnalités vont être génériques pour être le plus facilement réutilisable.
 
 ### Mode d'emploi
-Un composant est représenté par un rectangle avec à l'intérieur le nom de celui-ci précédé des deux-points *:* et sur son côté gauche deux rectangles plus petits protubérant. Son fonctionnement interne n'est pas détaillé contrairement à une classe. L'important se situe donc dans ses interfaces et ses ports, qui représentent les relations avec les autres composants :
+Un composant est représenté par un rectangle avec à l'intérieur le nom de celui-ci précédé des deux-points *":"* et sur son côté gauche deux rectangles plus petits protubérant. Son fonctionnement interne n'est **pas détaillé** contrairement à une classe. L'important se situe donc dans ses **interfaces et ses ports**, qui représentent les relations avec les autres composants :
 
 * **Interface offerte** : Une interface que le composant peut fournir à un autre.  
 Elle est représentée par un court segment terminé par un cercle complet. Le nom de l'interface est écrit au-dessus du segment.
 * **Interface requise** : Une interface dont le composant a besoin pour fonctionner.  
 Elle est représentée par un court segment terminé par un demi-cercle ouvert. Le nom de l'interface est écrit au-dessus du segment.
 
-Ces composants peuvent être intégrés dans des sous-sytèmes, représentés par des rectangles à l'intérieur desquels sont placés ses composants. Les différents sous-systèmes font partis d'un même environnement et peuvent être liés. On utilise alors un port, représenté par un carré vide situé à cheval sur la bordure du système, afin de signifier qu'une interface intéragit avec son environnement.  Deux types de liens avec l'environnement existent :
+Ces composants peuvent être intégrés dans des **sous-sytèmes**, représentés par des rectangles à l'intérieur desquels sont placés ses composants. Les différents sous-systèmes font partis d'un **même environnement** et peuvent être liés. On utilise alors un port, représenté par un carré vide situé à cheval sur la bordure du système, afin de signifier qu'une interface intéragit avec son environnement.  Deux types de liens avec l'environnement existent :
+
 * **Dépendance** : Si un sous-système est dépendant d'un autre, les interfaces et les ports correspondant à cette relation seront reliés par une flèche en pointillé sur le diagramme.
 * **Délégation** : Si un sous-système a une interface dont l'implémentation se situe en dehors de l'environnement actuel, on crée alors un connecteur de délégation, représenté par une flèche en trait plein pointant vers un port dont l'interface n'est reliée à rien.
 
@@ -75,17 +76,17 @@ Une autre notation des composants et sous-systèmes consistent en un rectangle a
         dtag: 'uml-deploy',
         ddesc: `
 ### Description
-Là où d'autres diagrammes UML s'attellent à décrire les composants logiques d'un système, le diagramme de Déploiement représente quant à lui la manière dont sont connectés les éléments physiques, comme par exemple un logiciel, un capteur, un serveur, ou un ordinateur. L'architecture visualisée est particulièrement adaptée à des systèmes embarquées qui utilisent du hardware contrôlé par des stimuli externes, comme des capteurs, ou plus simplement pour des modèles client/serveur qui font la distinction entre l'interface utilisateur et les données persistentes d'un système. 
+Là où d'autres diagrammes UML s'attellent à décrire les composants logiques d'un système, le diagramme de Déploiement représente quant à lui la manière dont sont connectés les **éléments physiques**, comme par exemple un logiciel, un capteur, un serveur, ou un ordinateur. L'architecture visualisée est particulièrement adaptée à des **systèmes embarquées** qui utilisent du hardware contrôlé par des stimuli externes, comme des capteurs, ou plus simplement pour des **modèles client/serveur** qui font la distinction entre l'interface utilisateur et les données persistentes d'un système. 
 
 ### Mode d'emploi
-Il est important de commencer par identifier en premier les éléments généraux d'un système, puis ensuite d'ajouter les relations entre eux appelées chemins de communication et représentées par un trait plein, ce qui signifie que les deux éléments reliés échangent des informations et des signaux. Ces éléments sont :
+Il est important de commencer par **identifier en premier les éléments généraux d'un système**, puis ensuite d'ajouter les relations entre eux appelées **chemins de communication** et représentées par un trait plein, ce qui signifie que les deux éléments reliés **échangent des informations et des signaux**. Ces éléments sont :
 
 * **Noeud** : Ressource matérielle ou logicielle, qui peut exécuter des composants ou des sous-systèmes.  
 Représenté par une boîte rectangulaire en relief
 * **Dispositif** : Type particulier de noeud, un dispositif est une ressource physique de calcul dans un système, comme un serveur d'application.  
 Représenté de la même manière qu'un noeud.
 
-Ensuite, on peut rajouter dans ces systèmes les éventuels sous-systèmes qu'ils utilisent ou exécutent, qui peuvent eux-même contenir d'autres éléments. On en retrouve plusieurs types :
+Ensuite, on peut rajouter dans ces systèmes les éventuels **sous-systèmes** qu'ils utilisent ou exécutent, qui peuvent eux-même contenir d'autres éléments. On en retrouve plusieurs types :
 
 * **Artefact** : Unité d'implémentation physique, tel qu'un exécutable, une librairie, des documents, ou des bases de données.  
 Représenté par un rectangle avec un symbole de page de document dans le coin supérieur droit.
@@ -114,13 +115,13 @@ Représenté par un segment terminé par une flèche triangulaire vide pointant 
         dtag: 'uml-objects',
         ddesc: `
 ### Description
-Ce diagramme permet de visualiser un système à moment figé dans le temps. Les différents systèmes sont alors instanciés, et on peut explorer leur comportement dans un état précis. La représentation de ce diagramme est identique à celle d'un [diagramme de Classes](#uml-class), si ce n'est que les différentes classes sont instanciées. Une utilisation répandue et de faire deux diagrammes d'objets, avant et après une interaction avec le système, afin d'en voir l'évolution.
+Ce diagramme permet de visualiser un **système à un moment figé** dans le temps. Les différents systèmes sont alors **instanciés**, et on peut explorer leur comportement dans un état précis. La représentation de ce diagramme est identique à celle d'un [diagramme de Classes](#uml-class), si ce n'est que les différentes classes sont instanciées. Une utilisation répandue et de faire deux diagrammes d'objets, avant et après une interaction avec le système, afin d'en voir l'évolution.
 
 ### Mode d'emploi
 L'usage est le même que pour un [diagramme de Classes](#uml-class), avec quelques modifications :
 
 * La partie basse qui contient les méthodes n'est plus utile, on en laisse le contenu vide.
-* On précède le nom de la classe du nom de l'objet instancié séparés par les deux points *:*, et on souligne le tout.
+* On précède le nom de la classe du nom de l'objet instancié séparés par les deux points *":"*, et on souligne le tout.
 * Dans la partie centrale, les attributs reçoivent des valeurs. Si tous les attributs ne sont pas renseignées, l'objet est dit *partiellement défini*.
 * Toutes les relations deviennent des liens simples, représentés par un trait plein.
 
@@ -136,14 +137,14 @@ Un diagramme d'Objet peut être utilisé pour représenter une exception non pr�
         dtag: 'uml-package',
         ddesc: `
 ### Description
-En UML, un Paquetage correspond à un regroupement d'éléments, qui peuvent être des classes, des objets, des noeuds, ou d'autres types d'éléments trouvables en langage UML. Ces paquetages peuvent ensuite s'imbriquer dans d'autres paquetages, s'organisant ainsi de manière hiérarchique, et fournissant un espace de nom pour les identifier. Cette organisation peut représenter les différentes couches du code d'une application, ou pour regrouper les composants en fonction de leur propriétaire et/ou de leur réutilisation. 
+En UML, un Paquetage correspond à un **regroupement d'éléments**, qui peuvent être des classes, des objets, des noeuds, ou d'autres types d'éléments trouvables en langage UML. Ces paquetages peuvent ensuite s'imbriquer dans d'autres paquetages, s'organisant ainsi de manière hiérarchique, et fournissant **un espace de nom** pour les identifier. Cette organisation peut représenter les différentes couches du code d'une application, ou pour regrouper les composants en fonction de leur propriétaire et/ou de leur réutilisation. 
 
 Lorsque l'on rajoute des relations entre ces différents paquetages, on obtient alors un diagramme de Paquetage.
 
 ### Mode d'emploi
 Un paquetage est représenté par un rectangle surmonté d'une étiquette contenant l'intitulé de l'espace de nom correspondant.
 
-Les relations entre paquetages ressemblent à une relation de Dépendance classique comme vue dans les [diagrammes de Composants](#uml-comp), mais peuvent adopter des formes particulières :
+Les relations entre paquetages ressemblent à une **relation de dépendance** classique comme vue dans les [diagrammes de Composants](#uml-comp), mais peuvent adopter des formes particulières :
 * **Utilisation** : Cas par défaut d'une relation de Dépendance.
 Représenté par une flèche en pointillé surmontée du terme *« use »*.
 * **Import** :  Les noms des membres de paquetage de paquetage cible sont importés dans l'espace de nom.  
@@ -153,7 +154,7 @@ Si le terme *« access »* est annoté,  alors l'import est spécifié comme pri
 * **Merge** : Le contenu du paquetage est étendu à celui de l'autre paquetage, de manière similaire à une relation d'Héritage, sauf qu'ici un nouveau paquetage est créé comme étant la fusion des deux. Si deux éléments dans le paquetage ont le même nom, leur définition sera également étendue.  
 Représenté par une flèche en pointillé surmontée du terme *« merge »*.
 
-Il est possible de détailler encore plus chaque espace de nom en listant les éléments qu'il comporte à l'intérieur de celui-ci. Son intitulé est alors inscrit directement dans l'étiquette.
+Il est possible de détailler encore plus chaque espace de nom en **listant les éléments** qu'il comporte à l'intérieur de celui-ci. Son intitulé est alors inscrit directement dans l'étiquette.
 
 ### Ressources
 [Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_des_paquetages) / [uml-diagrams.org](https://www.uml-diagrams.org/package-diagrams-overview.html)
@@ -165,18 +166,25 @@ Il est possible de détailler encore plus chaque espace de nom en listant les é
         dtag: 'uml-composite',
         ddesc: `
 ### Description
-Le diagramme de Structure Composite montre la structure interne d'une classe et décrit son comportement. Similaire au [diagramme de Classe](#uml-class), ce diagramme dépeint les éléments individuels d'une classe et non pas la classe dans sa globalité. Le concept est de montrer comment les éléments sont interconnectés lors d'une instance afin d'accomplir un objectif commun.
+Le diagramme de Structure Composite montre la **structure interne d'une classe et décrit son comportement**. Similaire au [diagramme de Classe](#uml-class), ce diagramme dépeint les éléments individuels d'une classe et non pas la classe dans sa globalité. Le concept est de montrer **comment les éléments sont interconnectés lors d'une instance** afin d'accomplir un **objectif commun**.
 
 ### Mode d'emploi
-Deux types de classes peuvent apparaître dans un diagramme de Structure Composite, les deux étant représentés par un rectangle avec le titre de la classe écrit en haut : 
-* **Classifieur structuré** : Classe dont le comportement peut être décrit uniquement avec des interactions entre ses éléments internes, ce qui équivaut à une classe abstraite.
-* **Classifieur encapsulé** : Classe qui interagit avec l'environnement extérieur. Le point d'interaction est appelé un port.
+Trois types de représentations des classes peuvent être utilisés dans un diagramme de Structure Composite : 
+* **Classifieur structuré** : Classe dont le comportement peut être décrit uniquement avec des interactions entre ses éléments internes, ce qui équivaut à une classe abstraite.  
+Représenté par un rectangle avec le titre de la classe écrit en haut dans un compartiment à part.
+* **Classifieur encapsulé** : Classe qui interagit avec l'environnement extérieur. Le point d'interaction est appelé un port.  
+Représenté comme une classifieur structuré, avec en plus un carré à cheval sur la bordure du rectangle pour chacun de ses ports.
+* **Collaboration** : Vision plus abstraite d'un classifieur, dans laquelle seuls les rôles et attributs utiles pour accomplir un but particulier sont montrés pour définir la structure interne de la classe. En isolant ces rôles principaux, la collaboration simplifie la structure et clarifie le modèle.  
+Représenté par un ovale en pointillé dans lequel se trouvent les rôles et attributs concernés.
 
+Les éléments constituants les classifieurs sont appelés des **parties**, représentées sur le diagramme comme un rectangle avec le nom du rôle à l'intérieur, pouvant être lui-même précédé du nom de l'instance du rôle, le tout séparé par *":"* deux points. Chaque partie décrit **un rôle dans une instance** de la classe, et peut être connectée à d'autres parties en interne ou bien à l'environnement externe **au travers des ports**.  
 
+Une **connection**, représentée par un **trait plein**, indique que les deux éléments reliés **communiquent et interagissent entre eux**. Il est possible d'écrire le type d'information transmise à côté de la connection utilisée. De plus, pour les connections qui sortent de la classe et interagissent avec l'environnement, il est possibile d'utiliser la notation d'interfaces comme dans les [diagrammes de Composant](#uml-comp).
 
 ### Ressources
+[Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_de_structure_composite) / [IBM](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-composite-structure) / [uml-diagrams.org](https://www.uml-diagrams.org/composite-structure-diagrams.html)
 `,
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/composite-diagram-1.jpg.webp'
+        ddiag:  require('./png/umlcomposite.png')
     },
   ]
 
