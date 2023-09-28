@@ -64,7 +64,7 @@ Ces composants peuvent être intégrés dans des **sous-sytèmes**, représenté
 * **Dépendance** : Si un sous-système est dépendant d'un autre, les interfaces et les ports correspondant à cette relation seront reliés par une flèche en pointillé sur le diagramme.
 * **Délégation** : Si un sous-système a une interface dont l'implémentation se situe en dehors de l'environnement actuel, on crée alors un connecteur de délégation, représenté par une flèche en trait plein pointant vers un port dont l'interface n'est reliée à rien.
 
-Une autre notation des composants et sous-systèmes consistent en un rectangle avec une icône de classeur dans le coin supérieur droit. On inscrit également le type, composant ou sous-système, entre guillemets *«* *»* afin de bien les différencier. Plus rarement, les interfaces peuvent être représentées de cette manière, auquel cas elles détaillent les fonctions qui les composent.
+Une autre notation des composants et sous-systèmes consistent en un rectangle avec une **icône de classeur** dans le coin supérieur droit. On inscrit également le type, composant ou sous-système, entre guillemets *"« »"*, appelé **stéréotype**, afin de bien les différencier. Plus rarement, les interfaces peuvent être représentées de cette manière, auquel cas elles détaillent les fonctions qui les composent.
 
 ### Ressources
 [IBM](https://developer.ibm.com/articles/the-component-diagram/) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-composants-deploiement#fig_composant_05)
@@ -94,7 +94,7 @@ Représenté par un rectangle avec un symbole de page de document dans le coin s
 * **Spécification de déploiement** : Fichier de configuration qui spécifie comment doit être déployer un artefact dans un noeud.  
 Représenté par un rectangle sur fond sombre et texte en blanc.
 
-Pour tous les éléments, on spécifie son type en haut entre guillemets *«* *»* suivi de son nom.  
+Pour tous les éléments, on spécifie son **stéréotype** en haut entre guillemets *"« »"* suivi de son nom.  
 
 Pour finir, on ajoute les liens entre ces sous-systèmes qui peuvent prendre plusieurs formes :
 
@@ -192,8 +192,37 @@ Une **connection**, représentée par un **trait plein**, indique que les deux �
     {
         dname: 'Cas d’utilisation',
         dtag: 'uml-cases',
-        ddesc: 'Le diagramme de cas d’utilisation dans UML est une sorte de diagramme qui utilise des acteurs et des cas d’utilisation pour décrire les fonctionnalités du système. Les actions, services et fonctions que le système doit exécuter sont ce que vous avez appelé les «cas d’utilisation». Alors que les entités qui opèrent sous des rôles spécifiques trouvés dans le système sont les «acteurs». Et le «système» est celui qui est en cours de développement.',
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/use-case.jpg.webp'
+        ddesc: `
+### Description
+Le diagramme de Cas d'utilisation est très utile pour comprendre les **besoins d'un système**. En se basant sur une **vision extérieure d'un utilisateur**, celui-ci exprime un **cas d'utilisation** qui correspond à ses attentes et ses besoins. Le diagramme va ensuite illustrer et définir le contexte à ces besoins dans un système entier ou bien seulement dans ses parties principales. C'est un modèle fréquemment utilisé **tôt dans la phase de conception**, et auquel on va s'y référer tout du long, notamment lors des phases d'analyse, de design, et de tests.
+
+### Mode d'emploi
+Les représentations de ce diagramme sont très simples, notamment puisqu'ils doivent souvent parler à des utilisateurs non-informaticiens :
+
+* **Acteur** : Rôle externe qui interagit avec le système. Ce peut être une personne mais aussi une machine, ou une organsation entière.  
+Représenté par un bonhomme bâton avec le nom du rôle inscrit dessous.
+* **Cas d'utilisation** : Fonction qu'un système utilise pour accomplir l'objectif de son acteur.  
+Représenté par une ellipse avec une courte phrase le décrivant à l'intérieur.
+* **Système** : Frontière du système représentée par un cadre dans lequel se trouve les cas d'utilisation. Les acteurs sont placés à l'extérieur.
+
+Il faut ensuite associer les acteurs et les cas d'utilisation à l'aide de différents types de relations :
+
+* **Association** : Un acteur est concerné par un cas d'utilisation. Un acteur peut être associé à plusieurs cas, et vice-versa. Une notion de multiplicité peut être ajoutée si l'acteur peut interagir plusieurs fois avec un cas d'utilisation.  
+Représenté par un trait plein, accompagné d'un symbole _"*"_ pour indiquer la multiplicité.
+* **Inclusion** : Un cas d'utilisation inclut le comportement d'un autre. Similaire à une relation de dépendance.  
+Représenté par une flèche en pointillé accompagnée de l'intitulé *« include »*.
+* **Extension** : Un cas d'utilisation étend son comportement à un autre. Contrairement à l'inclusion, l'extension est optionnelle est ne force pas l'autre cas à être utilisé si le premier l'est.  
+Représenté par une flèche en pointillé accompagnée de l'intitulé *« extend »*. Peut être annotée afin d'ajouter une condition à l'extension.
+* **Généralisation** : Entre acteurs, signifie que l'un peut être substitué par l'autre, auquel cas tous les cas d'utilisation liés lui sont transmis.  
+Entre cas d'utilisation, signifie qu'une utilisation est un cas particulier d'une autre. Similaire à l'héritage.  
+Représenté par un trait plein terminé par une flèche triangulaire vide.
+
+Des détails supplémentaires peuvent être rajoutés, comme la notion d'acteur **principal et secondaire** si plusieurs d'entre eux sont liés au même cas d'utilisation. Ou bien l'ajout aux cas d'utilisation d'un **stéréotype** entre guillemets *"« »"* afin de les typer plus précisément. 
+
+### Ressources
+[Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_de_cas_d%27utilisation) / [IBM](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-use-case) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-cas-utilisation#L2-4-4)
+`,
+        ddiag: require('./png/umlcases.png')
     },
     {
         dname: 'Activité',
