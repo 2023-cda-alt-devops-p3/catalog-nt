@@ -173,7 +173,7 @@ Trois types de représentations des classes peuvent être utilisés dans un diag
 * **Classifieur structuré** : Classe dont le comportement peut être décrit uniquement avec des interactions entre ses éléments internes, ce qui équivaut à une classe abstraite.  
 Représenté par un rectangle avec le titre de la classe écrit en haut dans un compartiment à part.
 * **Classifieur encapsulé** : Classe qui interagit avec l'environnement extérieur. Le point d'interaction est appelé un port.  
-Représenté comme une classifieur structuré, avec en plus un carré à cheval sur la bordure du rectangle pour chacun de ses ports.
+Représenté comme un classifieur structuré, avec en plus un carré à cheval sur la bordure du rectangle pour chacun de ses ports.
 * **Collaboration** : Vision plus abstraite d'un classifieur, dans laquelle seuls les rôles et attributs utiles pour accomplir un but particulier sont montrés pour définir la structure interne de la classe. En isolant ces rôles principaux, la collaboration simplifie la structure et clarifie le modèle.  
 Représenté par un ovale en pointillé dans lequel se trouvent les rôles et attributs concernés.
 
@@ -217,7 +217,7 @@ Représenté par une flèche en pointillé accompagnée de l'intitulé *« exten
 Entre cas d'utilisation, signifie qu'une utilisation est un cas particulier d'une autre. Similaire à l'héritage.  
 Représenté par un trait plein terminé par une flèche triangulaire vide.
 
-Des détails supplémentaires peuvent être rajoutés, comme la notion d'acteur **principal et secondaire** si plusieurs d'entre eux sont liés au même cas d'utilisation. Ou bien l'ajout aux cas d'utilisation d'un **stéréotype** entre guillemets *"« »"* afin de les typer plus précisément. 
+Des détails supplémentaires peuvent être rajoutés, comme la notion d'acteur **principal et secondaire** si plusieurs d'entre eux sont liés au même cas d'utilisation, ou bien l'ajout aux cas d'utilisation d'un **stéréotype** entre guillemets *"« »"* afin de les typer plus précisément. 
 
 ### Ressources
 [Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_de_cas_d%27utilisation) / [IBM](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-use-case) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-cas-utilisation#L2-4-4)
@@ -229,10 +229,10 @@ Des détails supplémentaires peuvent être rajoutés, comme la notion d'acteur 
         dtag: 'uml-activity',
         ddesc: `
 ### Description
-Un diagramme d'Activité sert à modéliser les comportements d'un système ou d'un cas d'utilisation sous forme d'une séquence d'actions. Différents comportements peuvent être représentés en parallèle, permettant ainsi de proposer une représentation visuelle de systèmes complexes facilement compréhensible même pour des non-informaticiens. D'ailleurs ce diagramme peut servir pour des cas de flux de travail plus généraux que du développement de logiciel ou d'application.
+Un diagramme d'Activité sert à modéliser les comportements d'un système ou d'un cas d'utilisation sous forme d'une **séquence d'actions**. Différents comportements peuvent être représentés en parallèle, permettant ainsi de proposer une représentation visuelle de **systèmes complexes** facilement compréhensible même pour des non-informaticiens. D'ailleurs ce diagramme peut servir pour des cas de **flux de travail** plus généraux que du développement de logiciel ou d'application.
 
 ### Mode d'emploi
-En premier lieu, il est nécessaire d'identifier les différentes étapes d'action, qui peuvent prendre plusieurs formes :
+En premier lieu, il est nécessaire d'identifier les différentes **étapes d'action**, qui peuvent prendre plusieurs formes :
 * **Action** : Activité ou changement d'état dans la séquence.  
 Représenté par un rectangle aux coins arrondis dans lequel se trouve le nom d'action.
 * **Décision** : Branche d'activité conditionnelle avec une entrée et plusieurs sorties.  
@@ -243,17 +243,20 @@ Représentée également par un losange.
 Représenté par une large barre.
 * **Union** : Point où un plusieurs flux sont synchronisés en un seul.
 Représenté par une large barre.
-* **Initial/Final** Noeud marquant le point d'appel et de fin des flux. Une activité peut avoir plusieurs point initiaux, mais un seul point final.  
+* **Initial/Final** : Noeud marquant le point d'appel et de fin des flux. Une activité peut avoir plusieurs point initiaux, mais un seul point final.  
 Représenté par un disque plein pour le point initial, entouré d'un cercle pour le point final.  
-Si le point final ne termine q'un seul flux et pas l'ensemble de l'activité, il est représenté par un disque barré d'une croix.
+Si le point final ne termine qu'un seul flux et pas l'ensemble de l'activité, il est représenté par un disque barré d'une croix.
 
-Pour passer d'une étape à une autre, on les relie avec une transition, représentée par une flèche en trait plein. Les transitions démarrent dès lors que l'action qui la précède est terminée, ce qui provoque automatiquement le début de la prochaine action.
+Pour passer d'une étape à une autre, on les relie avec une **transition**, représentée par une flèche en trait plein. Les transitions démarrent dès lors que l'action qui la précède est terminée, ce qui provoque automatiquement le début de la prochaine action.
 
-Une autre utilisation du diagramme d'Activité permet non pas de représenter un flux d'activité, mais plutôt une flux de données. Dans ce cas là, les noeud d'actions deviennent des noeuds d'objets, et ses entrées et sorties sont appelées des pins. L'activité ne peut commencer que si tous les pins d'entrée ont une valeur qui leur est affectée. Un pin est représenté par un petit carré en bordure de l'objet, et peut être nommé et typé avec des flèches qui indiquent s'il s'agit d'une entrée ou d'une sortie.
+Une autre utilisation du diagramme d'Activité permet non pas de représenter un flux d'activité, mais plutôt une **flux de données**. Dans ce cas là, les noeud d'actions deviennent des **noeuds d'objets**, et ses entrées et sorties sont appelées des **pins**. L'activité ne peut commencer que si tous les pins d'entrée ont une valeur qui leur est affectée. Un pin est représenté par un petit carré en bordure de l'objet, et peut être nommé et typé avec des flèches qui indiquent s'il s'agit d'une entrée ou d'une sortie.
 
-### Resources        
+Il est également possible de **partitionner** les noeuds d'activités en les regroupant dans des **couloirs**, afin de mieux organiser le modèle. Ce regroupement n'a pas de règles arrêtées, et peut se faire en colonne ou ligne, présentant le diagramme alors un peu comme un tableau, mais aussi avec des lignes courbes, ou des actions à cheval entre deux partitions par exemple.
+
+### Resources
+[Wikipédia](https://en.wikipedia.org/wiki/Activity_diagram) / [Creately](https://creately.com/guides/activity-diagram-tutorial/) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-activites)
 `,
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/activity-diagram.jpg.webp'
+        ddiag: require('./png/umlactivity.png')
     },
     {
         dname: 'État',
