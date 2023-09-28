@@ -227,7 +227,32 @@ Des détails supplémentaires peuvent être rajoutés, comme la notion d'acteur 
     {
         dname: 'Activité',
         dtag: 'uml-activity',
-        ddesc: 'Ce type de diagramme présente une présentation visuelle d’une série d’actions ou d’un flux de contrôle dans un certain système qui est identique à un organigramme ou un diagramme de flux de données. Le diagramme d’activité a généralement un début ou «l’état initial» et une fin qui est l’état final.',
+        ddesc: `
+### Description
+Un diagramme d'Activité sert à modéliser les comportements d'un système ou d'un cas d'utilisation sous forme d'une séquence d'actions. Différents comportements peuvent être représentés en parallèle, permettant ainsi de proposer une représentation visuelle de systèmes complexes facilement compréhensible même pour des non-informaticiens. D'ailleurs ce diagramme peut servir pour des cas de flux de travail plus généraux que du développement de logiciel ou d'application.
+
+### Mode d'emploi
+En premier lieu, il est nécessaire d'identifier les différentes étapes d'action, qui peuvent prendre plusieurs formes :
+* **Action** : Activité ou changement d'état dans la séquence.  
+Représenté par un rectangle aux coins arrondis dans lequel se trouve le nom d'action.
+* **Décision** : Branche d'activité conditionnelle avec une entrée et plusieurs sorties.  
+Représentée par un losange, dans lequel est parfois écrite la condition en question.
+* **Fusion** : Branche d'activité où se rejoigne plusieurs entrées un une seule sortie.
+Représentée également par un losange.
+* **Bifurcation** : Point où un seul flux se change en plusieurs
+Représenté par une large barre.
+* **Union** : Point où un plusieurs flux sont synchronisés en un seul.
+Représenté par une large barre.
+* **Initial/Final** Noeud marquant le point d'appel et de fin des flux. Une activité peut avoir plusieurs point initiaux, mais un seul point final.  
+Représenté par un disque plein pour le point initial, entouré d'un cercle pour le point final.  
+Si le point final ne termine q'un seul flux et pas l'ensemble de l'activité, il est représenté par un disque barré d'une croix.
+
+Pour passer d'une étape à une autre, on les relie avec une transition, représentée par une flèche en trait plein. Les transitions démarrent dès lors que l'action qui la précède est terminée, ce qui provoque automatiquement le début de la prochaine action.
+
+Une autre utilisation du diagramme d'Activité permet non pas de représenter un flux d'activité, mais plutôt une flux de données. Dans ce cas là, les noeud d'actions deviennent des noeuds d'objets, et ses entrées et sorties sont appelées des pins. L'activité ne peut commencer que si tous les pins d'entrée ont une valeur qui leur est affectée. Un pin est représenté par un petit carré en bordure de l'objet, et peut être nommé et typé avec des flèches qui indiquent s'il s'agit d'une entrée ou d'une sortie.
+
+### Resources        
+`,
         ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/activity-diagram.jpg.webp'
     },
     {
