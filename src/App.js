@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {dataUMLS,dataUMLC,dataMERC,dataMERO,dataMERL,dataMERP} from './data.js'; /*data containing diagrams infos*/
 import ReactMarkdown from 'react-markdown'
+import ModalImage from 'react-modal-image';
 
 /* Diagramcard content automated builder from data file */
 
@@ -14,7 +15,7 @@ function DiagramCard({dname,dtag,ddesc,ddiag}) {
         </div>
         <div className='column'>
           <div className='imgbox'>
-          <img src={ddiag} alt={dname}></img>
+          <ModalImage  small={ddiag} medium={ddiag} alt={`Diagramme de ${dname}`} imageBackgroundColor='white'/>
           <p>Exemple de diagramme de {dname}</p>
           </div>
       </div></div>
