@@ -42,7 +42,7 @@ A noter qu'en plus des classes, ce diagramme peut également représenter des **
 ### Ressources
 [Wikipedia](https://fr.wikipedia.org/wiki/Diagramme_de_classes) / [javapoint](https://www.javatpoint.com/uml-class-diagram) / [IBM](https://developer.ibm.com/articles/the-class-diagram/)
 `,
-        ddiag: require('./png/umlclass.png')
+        ddiag: require('./img/umlclass.webp')
     },
     {
         dname: 'Composants',
@@ -69,7 +69,7 @@ Une autre notation des composants et sous-systèmes consistent en un rectangle a
 ### Ressources
 [IBM](https://developer.ibm.com/articles/the-component-diagram/) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-composants-deploiement#fig_composant_05)
 `,
-        ddiag: require('./png/umlcomponent.png')
+        ddiag: require('./img/umlcomponent.webp')
     },
     {
         dname: 'Déploiement',
@@ -108,7 +108,7 @@ Représenté par un segment terminé par une flèche triangulaire vide pointant 
 [Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_de_d%C3%A9ploiement) / [Creately](https://creately.com/blog/fr/uncategorized-fr/tutoriel-sur-le-diagramme-de-deploiement/) / 
 [IBM](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-deployment) / [UML-diagrams.org](https://www.uml-diagrams.org/deployment-diagrams-overview.html)
 `,
-        ddiag: require('./png/umldeploy.png')
+        ddiag: require('./img/umldeploy.webp')
     },
     {
         dname: 'Objets',
@@ -130,7 +130,7 @@ Un diagramme d'Objet peut être utilisé pour représenter une exception non pr�
 ### Ressources
 [Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_d%27objets) / [IBM](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-object) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-classes#L3-5)
 `,
-        ddiag: require('./png/umlobjects.png')
+        ddiag: require('./img/umlobjects.webp')
     },
     {
         dname: 'Paquetage',
@@ -159,7 +159,7 @@ Il est possible de détailler encore plus chaque espace de nom en **listant les 
 ### Ressources
 [Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_des_paquetages) / [uml-diagrams.org](https://www.uml-diagrams.org/package-diagrams-overview.html)
 `,
-        ddiag: require('./png/umlpackage.png')
+        ddiag: require('./img/umlpackage.webp')
     },
     {
         dname: 'Structure composite',
@@ -184,7 +184,7 @@ Une **connection**, représentée par un **trait plein**, indique que les deux �
 ### Ressources
 [Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_de_structure_composite) / [IBM](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-composite-structure) / [uml-diagrams.org](https://www.uml-diagrams.org/composite-structure-diagrams.html)
 `,
-        ddiag:  require('./png/umlcomposite.png')
+        ddiag:  require('./img/umlcomposite.webp')
     },
   ]
 
@@ -222,7 +222,7 @@ Des détails supplémentaires peuvent être rajoutés, comme la notion d'acteur 
 ### Ressources
 [Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_de_cas_d%27utilisation) / [IBM](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-use-case) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-cas-utilisation#L2-4-4)
 `,
-        ddiag: require('./png/umlcases.png')
+        ddiag: require('./img/umlcases.webp')
     },
     {
         dname: 'Activité',
@@ -259,7 +259,7 @@ Il est également possible de **partitionner** les noeuds d'activités en les re
 ### Resources
 [Wikipédia](https://en.wikipedia.org/wiki/Activity_diagram) / [Creately](https://creately.com/guides/activity-diagram-tutorial/) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-activites)
 `,
-        ddiag: require('./png/umlactivity.png')
+        ddiag: require('./img/umlactivity.webp')
     },
     {
         dname: 'État-transitions',
@@ -295,7 +295,7 @@ Une notion de **concurrence** peut rentrer en jeu lorsque, pour le même état i
 ### Ressources
 [Wikipédia](https://en.wikipedia.org/wiki/UML_state_machine) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-etats-transitions#L5-6-5) / [Lucidchart](https://www.lucidchart.com/pages/uml-state-machine-diagram?)
 `,
-        ddiag: require('./png/umlstate.png')
+        ddiag: require('./img/umlstate.webp')
     },
     {
         dname: 'Interactions',

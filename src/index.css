@@ -2,18 +2,22 @@
 @font-face {
 	font-family: 'SF Pro Dislay Regular';
 	src: url(./fonts/SF-Pro-Text-Light.otf) format("opentype");
+  font-display: swap;
 }
 @font-face {
   font-family: 'SF Pro Dislay Bold';
   src: url(./fonts/SFPRODISPLAYBOLD.OTF) format("opentype");
+  font-display: swap;
 }
 @font-face {
   font-family: 'SF Pro Text Medium';
   src: url(./fonts/SF-Pro-Text-Medium.otf) format("opentype");
+  font-display: swap;
 }
 @font-face {
   font-family: 'SF Pro Text Light';
   src: url(./fonts/SF-Pro-Text-Light.otf) format("opentype");
+  font-display: swap;
 }
 
 /* global styling */
@@ -27,6 +31,7 @@
 
 html{
   scroll-padding-top: 90px;
+  scroll-behavior: smooth;
 }
 
 /* main content */
