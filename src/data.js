@@ -298,10 +298,27 @@ Une notion de **concurrence** peut rentrer en jeu lorsque, pour le même état i
         ddiag: require('./img/umlstate.webp')
     },
     {
-        dname: 'Interactions',
+        dname: "Interactivité",
         dtag: 'uml-interactions',
-        ddesc: 'Ce type de diagramme comportemental détaille l’image globale du flux de contrôle de l’interaction spécifique. Le diagramme de vue d’ensemble des interactions est considéré comme une variante du diagramme d’activités puisque les sujets sont les occurrences d’interaction.',
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/interaction-diagram-1.jpg.webp'
+        ddesc: `
+### Description
+Un diagramme d'Interactivité, aussi appelé **diagramme global d'interactions**, est une variante au [diagramme d'Activité](#uml-activity) dans le sens où il représente lui aussi une **séquence d'actions** sous forme d'un flux de travail. La différence se trouve dans le fait que les noeuds du diagrammes ne sont pas des actions normales, mais sont des **cadres** représentant des **sous-digrammes d'interaction**.  Le diagramme d'Interactivité peut être alors utile pour **déconstruire un scénario complexe**, qui demanderait trop de chemins conditionnels si l'on utilisait un seul diagramme simple d'interaction.
+
+### Mode d'emploi
+Dans la majorité des cas, le diagramme global d'interaction est lui-même un **diagramme de Séquence** dans lequel ses noeuds vont être des sous-digrammes d'interaction. Ces derniers peuvent être de trois types, décrits plus loin dans la catalogue :
+
+* **[Diagramme de Séquence](#uml-sequence)** (**sd**).
+* **[Diagramme de Communication](#uml-comm)** (**cd**).
+* **[Diagramme de Temps](#uml-time)** (**td**).
+
+Ils sont représentés par un cadre, avec une étiquette dans le coin supérieur gauche contenant les **initiales** du type de diagramme d'interaction utilisé suivies de son nom. Le contenu des cadres est détaillé pour chaque diagrammes dans son propre chapitre du catalogue.
+
+Les transitions entre les noeuds sont les mêmes que pour le [diagramme d'Activité](#uml-activity), avec les embranchements de **décision**, **fusion**, **bifurcation**, et **union**. Il faut également un **noeud initial et final** pour décrire où démarre et termine le flux.
+
+### Ressources
+[Wikipédia](https://en.wikipedia.org/wiki/Interaction_overview_diagram) / [agilemodeling](http://agilemodeling.com/artifacts/interactionOverviewDiagram.htm)
+`,
+        ddiag: ''
     },
     {
         dname: 'Séquence',
