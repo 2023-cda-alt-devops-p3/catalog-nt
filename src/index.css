@@ -2,18 +2,22 @@
 @font-face {
 	font-family: 'SF Pro Dislay Regular';
 	src: url(./fonts/SF-Pro-Text-Light.otf) format("opentype");
+  font-display: swap;
 }
 @font-face {
   font-family: 'SF Pro Dislay Bold';
   src: url(./fonts/SFPRODISPLAYBOLD.OTF) format("opentype");
+  font-display: swap;
 }
 @font-face {
   font-family: 'SF Pro Text Medium';
   src: url(./fonts/SF-Pro-Text-Medium.otf) format("opentype");
+  font-display: swap;
 }
 @font-face {
   font-family: 'SF Pro Text Light';
   src: url(./fonts/SF-Pro-Text-Light.otf) format("opentype");
+  font-display: swap;
 }
 
 /* global styling */
@@ -27,6 +31,7 @@
 
 html{
   scroll-padding-top: 90px;
+  scroll-behavior: smooth;
 }
 
 /* main content */
@@ -42,19 +47,6 @@ html{
   padding-right: 30px;
   flex: 100%;
   max-width: 100%;
-}
-
-.App-body img {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  vertical-align: middle;
-  width: 100%; 
-}
-
-.App-body figcaption {
-  text-align: center;
-  font-style: italic;
-  margin-bottom: 20px;
 }
 
 .App-body p {
@@ -104,6 +96,27 @@ html{
 .App-body ul {
   list-style: none;
   padding-left: 20px;
+}
+
+.imgbox img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  vertical-align: middle;
+}
+
+.imgbox {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.imgbox p {
+  text-align: center;
+  font-style: italic;
+  padding-bottom: 1vh;
+  font-family: 'SF Pro Text Light';
 }
 
 ul li {
@@ -172,6 +185,15 @@ ol ul li::before {
   margin-top: 20px;
   margin-bottom: 20px;
   width: 50%;
+}
+
+.App-sidebar h1 {
+  filter: drop-shadow(0 4px 4px #454545be);
+  font-size: calc(10px + 2vmin);
+  color: #454545;
+  padding-left: 30px;
+  text-align: left;  
+  font-size: calc(3px + 2vmin);
 }
 
 .logosb {
@@ -258,7 +280,7 @@ ol ul li::before {
   position: relative;
 }
 
-.dropdown .dropbtn {
+.dropdown .menu {
   font-size: 16px;
   border: none;
   outline: none;
@@ -270,7 +292,7 @@ ol ul li::before {
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .menu {
   background-color: #E79057;
 }
 
@@ -314,11 +336,16 @@ ol ul li::before {
   .App-body ul {
     padding-left: 60px;
   }
+
+  .imgbox p {
+    padding-bottom: 0vh;
+  }
   .App-sidebar {
     width: 30vh;
     height: 100%;
     font-size: calc(3px + 2vmin);
     overflow-y: auto;
+    padding-left: 10px;
   }
 
   ul li {
@@ -340,18 +367,19 @@ ol ul li::before {
   html{
     scroll-padding-top: 10px;
   }
-
   .App-body{
     font-size: calc(2vmin);
     margin-right: 1vw;
   }
-  .App-body img {
-    padding-left: 2vw;
-    max-width: 60vh;
+  .imgbox {
+    width: 100%;
+    max-width: max-content;
+    padding: 1vh 1vh 1vh 1vh;
   }
   .row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   .row:after {
     content: "";

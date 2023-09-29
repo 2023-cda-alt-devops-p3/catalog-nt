@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import {dataUMLS,dataUMLC,dataMERC,dataMERO,dataMERL,dataMERP} from './data.js'; /*data containing diagrams infos*/
 import ReactMarkdown from 'react-markdown'
+import ModalImage from 'react-modal-image';
 
 /* Diagramcard content automated builder from data file */
 
@@ -13,8 +14,10 @@ function DiagramCard({dname,dtag,ddesc,ddiag}) {
           <p><ReactMarkdown children={ddesc}></ReactMarkdown></p>
         </div>
         <div className='column'>
-          <img src={ddiag} alt={dname}></img>
-          <figcaption>Exemple de diagramme de {dname}</figcaption>
+          <div className='imgbox'>
+          <ModalImage  small={ddiag} medium={ddiag} alt={`Diagramme de ${dname}`} imageBackgroundColor='white'/><hr/>
+          <p>Exemple de diagramme de {dname}</p>
+          </div>
       </div></div>
     </div>
   )
@@ -42,6 +45,7 @@ function Sidebar() {
   return(
   <div id ="Sidebar" className="App-sidebar">
     <div className='logosb'><img src='simplon-icon-192.png' alt='logo simplon'></img></div>
+    <h1>Table des matières</h1>
     <a href='#uml' className='sideTitle'>Diagrammes UML</a>
     <Accordion
       title = 'Diagrammes de structure'
@@ -84,7 +88,7 @@ function Topbar() {
   return(
   <div className="App-topbar">
     <div className="dropdown">
-      <button className="dropbtn">    
+      <button className="menu">    
         <svg width="40" height="40" viewBox="0 0 100 80">
         <path d="M0 0H100V20H0z" fill="white"></path>
         <path d="M0 30H100V50H0z" fill="white"></path>

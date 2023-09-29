@@ -65,7 +65,6 @@ Demo : https://catalog-nt.netlify.app/
 ## Sécurité
 - [:x:] Prévenir les vulnérabilités principales (cross site, injection sql, protection des tokens, validation des données) => GoogleSearchConsole, Sucuri
 - [:x:] Respect de la protection des données (RGPD, encapsulation)
-- [:x:] Utilisation des chemins absolus
 
 ## SEO
 - [:x:] Mise en place de la stratégie SEO : données structurées, ...
@@ -79,16 +78,16 @@ Demo : https://catalog-nt.netlify.app/
 
 ## Accessibilité
 - [:x:] Accessibilité : title, aria-label, alt
-- [:x:] Optimisation des images : poids et formats adaptés
+- [:heavy_check_mark:] Optimisation des images : poids et formats adaptés
 - [:x:] Fournir un site web avec une bonne expérience utilisateur
-- [:x:] Texte lisible : interlinéage suffisant, taille des polices proportionnelles, contraste des couleurs optimale, ...
+- [:heavy_check_mark:] Texte lisible : interlinéage suffisant, taille des polices proportionnelles, contraste des couleurs optimale, ...
 
 ## Architecture
 - [:heavy_check_mark:] Bons principes de structuration respectés, y compris pour le web mobile => vérif des balises (body, header, navbar), et des noms de classes CSS, variables, media queries
 - [:heavy_check_mark:] Eviter les répétitions en utilisant des fonctions => check du code source
 
 ## Contenu
-- [:x:] Contenu vérifié : informations croisées, résumé de plusieurs sources, ...
+- [:heavy_check_mark:] Contenu vérifié : informations croisées, résumé de plusieurs sources, ...
 - [:x:] Détail des étapes pour chaque diagramme
 
 ## UI/UX
