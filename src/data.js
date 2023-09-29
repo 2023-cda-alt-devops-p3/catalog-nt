@@ -149,8 +149,8 @@ Les relations entre paquetages ressemblent à une **relation de dépendance** cl
 Représenté par une flèche en pointillé surmontée du terme *« use »*.
 * **Import** :  Les noms des membres de paquetage de paquetage cible sont importés dans l'espace de nom.  
 Représenté par une flèche en pointillé.  
-Si le terme *« import »* est annoté, alors l'import est spécifié comme public.  
-Si le terme *« access »* est annoté,  alors l'import est spécifié comme privé
+• Si le terme *« import »* est annoté, alors l'import est spécifié comme public.  
+• Si le terme *« access »* est annoté,  alors l'import est spécifié comme privé
 * **Merge** : Le contenu du paquetage est étendu à celui de l'autre paquetage, de manière similaire à une relation d'Héritage, sauf qu'ici un nouveau paquetage est créé comme étant la fusion des deux. Si deux éléments dans le paquetage ont le même nom, leur définition sera également étendue.  
 Représenté par une flèche en pointillé surmontée du terme *« merge »*.
 
@@ -243,11 +243,11 @@ Ensuite, il faut spécifier les cas où le flux se retrouve dans des situations 
 
 * **Décision** : Branche d'activité conditionnelle avec une entrée et plusieurs sorties.  
 Représentée par un losange, dans lequel est parfois écrite la condition en question.
-* **Fusion** : Branche d'activité où se rejoigne plusieurs entrées un une seule sortie.
+* **Fusion** : Branche d'activité où se rejoigne plusieurs entrées un une seule sortie.  
 Représentée également par un losange.
-* **Bifurcation** : Point où un seul flux se change en plusieurs
+* **Bifurcation** : Point où un seul flux se change en plusieurs.  
 Représenté par une large barre.
-* **Union** : Point où un plusieurs flux sont synchronisés en un seul.
+* **Union** : Point où un plusieurs flux sont synchronisés en un seul.  
 Représenté par une large barre.
 
 Pour passer d'une étape à une autre, on les relie avec une **transition**, représentée par une flèche en trait plein. Les transitions démarrent dès lors que l'action qui la précède est terminée, ce qui provoque automatiquement le début de la prochaine action.
@@ -266,7 +266,7 @@ Il est également possible de **partitionner** les noeuds d'activités en les re
         dtag: 'uml-state',
         ddesc: `
 ### Description
-Dérivé du concept d'*automate fini* en mathématique, l'idée du diagramme d'Etats-transitions est de décrire le **comportement interne** d'un appareil, d'un programme, ou de tout autre processus technique, à l'aide d'éléments pouvant se trouver dans un **nombre limités d'états**, et où les transitions entre ces états sont **précisément définies**. Cela signifie que les comportements des éléments ne peuvent pas sortir des scénarii prévus pour eux. Les **transitions** quand à elle sont les réactions à des **évènements** qui sont le moteur de l'évolution du système. Cette approche peut permettre de simplifier énormément le nombre de chemins d'exécution et de conditions testées dans le code. A l'inverse, si elle est utilisée pour un système qui ne ressemble pas à un automate fini, cela va complexifier excessivement le code.
+Dérivé du concept d'*automate fini* en mathématique, l'idée du diagramme d'États-transitions est de décrire le **comportement interne** d'un appareil, d'un programme, ou de tout autre processus technique, à l'aide d'éléments pouvant se trouver dans un **nombre limités d'états**, et où les transitions entre ces états sont **précisément définies**. Cela signifie que les comportements des éléments ne peuvent pas sortir des scénarii prévus pour eux. Les **transitions** quand à elle sont les réactions à des **évènements** qui sont le moteur de l'évolution du système. Cette approche peut permettre de simplifier énormément le nombre de chemins d'exécution et de conditions testées dans le code. A l'inverse, si elle est utilisée pour un système qui ne ressemble pas à un automate fini, cela va complexifier excessivement le code.
 
 ### Mode d'emploi
 
@@ -276,7 +276,7 @@ Il faut commencer par identifier les principaux **états** qui composent notre o
 Représenté par un rectangle aux coins arrondis.
 * **État composite** : Décomposition en régions d'un état contenant plusieurs sous-état.  
 Représenté par un cadre qui englobe d'autres états élémentaires, avec son nom écrit dans un compartiment en haut du cadre.
-* **État Initial/Final** : Indique l'état de départ de l'objet lorsque le diagramme d'états-transitions démarre, et l'état final lorsqu'il est terminé.
+* **État Initial/Final** : Indique l'état de départ de l'objet lorsque le diagramme d'états-transitions démarre, et l'état final lorsqu'il est terminé.  
 Représenté par un disque plein pour l'état initial, entouré d'un cercle pour l'état final.  
 
 L'**évolution** de ces états est alors indiqué comme suit :
@@ -305,7 +305,7 @@ Une notion de **concurrence** peut rentrer en jeu lorsque, pour le même état i
 Un diagramme d'Interactivité, aussi appelé **diagramme global d'interactions**, est une variante au [diagramme d'Activité](#uml-activity) dans le sens où il représente lui aussi une **séquence d'actions** sous forme d'un flux de travail. La différence se trouve dans le fait que les noeuds du diagrammes ne sont pas des actions normales, mais sont des **cadres** représentant des **sous-digrammes d'interaction**.  Le diagramme d'Interactivité peut être alors utile pour **déconstruire un scénario complexe**, qui demanderait trop de chemins conditionnels si l'on utilisait un seul diagramme simple d'interaction.
 
 ### Mode d'emploi
-Dans la majorité des cas, le diagramme global d'interaction est lui-même un **diagramme de Séquence** dans lequel ses noeuds vont être des sous-digrammes d'interaction. Ces derniers peuvent être de trois types, décrits plus loin dans la catalogue :
+Dans la majorité des cas, le diagramme global d'interaction est lui-même un diagramme de Séquence dans lequel ses noeuds vont être des **sous-diagrammes d'interaction**. Ces derniers peuvent être de trois types, décrits plus loin dans la catalogue :
 
 * **[Diagramme de Séquence](#uml-sequence)** (**sd**).
 * **[Diagramme de Communication](#uml-comm)** (**cd**).
@@ -316,7 +316,7 @@ Ils sont représentés par un cadre, avec une étiquette dans le coin supérieur
 Les transitions entre les noeuds sont les mêmes que pour le [diagramme d'Activité](#uml-activity), avec les embranchements de **décision**, **fusion**, **bifurcation**, et **union**. Il faut également un **noeud initial et final** pour décrire où démarre et termine le flux.
 
 ### Ressources
-[Wikipédia](https://en.wikipedia.org/wiki/Interaction_overview_diagram) / [agilemodeling](http://agilemodeling.com/artifacts/interactionOverviewDiagram.htm)
+[Wikipédia](https://en.wikipedia.org/wiki/Interaction_overview_diagram) / [Agile Modeling](http://agilemodeling.com/artifacts/interactionOverviewDiagram.htm)
 `,
         ddiag: ''
     },
@@ -325,26 +325,94 @@ Les transitions entre les noeuds sont les mêmes que pour le [diagramme d'Activi
         dtag: 'uml-sequence',
         ddesc: `
 ### Description
-Le but d'un diagramme de Séquence est de définir la suite d'évènements qui va permettre d'accomplir l'objectif désiré d'un système. Il s'attarde moins sur les interactions en elles-même, mais plutôt sur l' ordre dans lequel elles surviennent. C'est un diagramme souvent utilisé en complément du [diagramme des Cas d'utilisation](#uml-cases) durant la phase d'identification des besoins, et qui permet d'avoir une vue plus globale de la séquence des évènements qu'avec un [diagramme d'états-transitions](#uml-state) par exemple.
+Le diagramme de Séquence est le **diagramme d'interaction** le plus répandu. Le but de ce modèle est de définir la **suite logique d'évènements** qui va permettre d'accomplir l'objectif désiré d'un système. Il s'attarde moins sur les interactions en elles-même, mais plutôt sur l'**ordre dans lequel elles surviennent** et sur les **messages** échangés. C'est un diagramme souvent utilisé en complément du [diagramme des Cas d'utilisation](#uml-cases) durant la phase d'identification des besoins, et qui permet d'avoir une vue plus globale de la séquence des évènements qu'avec un [diagramme d'états-transitions](#uml-state) par exemple.
 
 ### Mode d'emploi
+La première étape est d'identifier les éléments qui vont intervenir pour remplir l'objectif choisi. Ils vont être disposés en ligne en haut du diagramme et vont être composés de deux éléments:
+
+* **Classifieur** : Element qui va envoyer et recevoir des messages. Ce peut être une classe, un objet instancié, un acteur, ou même un cas d'utilisation.  
+Représenté par un rectangle avec le nom de l'élément à l'intérieur.  
+S'il s'agit d'une instance, le nom de celle-ci est écrite avant le nom de l'élément, et en séparant les deux par *":"* deux points. 
+* **Ligne de vie** : Indique la durée de vie d'un classifieur dans le scénario modélisé.  
+Représentée par une ligne verticale en pointillée qui part du bas du classifieur associé.
+
+Il est important de classer les classifieurs dans l'**ordre dans lequel ils vont être amenés à intervenir** dans la suite d'évènements, en **partant de la gauche par le premier initiateur**. Le temps qui s'écoule est visualisé par l'axe vertical, le long des lignes de vie.
+
+Ensuite, la séquence d'évènements va évoluer à travers les **messages** que vont s'envoyer les différents classifieurs. Pour se faire, on les représente à l'aide d'une **flèche qui s'étend d'une ligne de vie à une autre** annotée du message en question. Différents types de messages peuvent être utilisés :
+
+* **Message synchrone** : L'envoyeur suspend son activité le temps de recevoir une réponse à son message.  
+Représenté par une flèche triangulaire pleine, pointant vers le receveur.
+* **Message asynchrone** : L'envoyeur envoie le message et continue son activité sans attendre un retour. Souvent vers des éléments autonomes ou du hardware.  
+Représenté par une flèche ouverte ou partielle.  
+• Si le message asynchrone sert à créer un nouveau classifieur, le message *"«create»"* est annoté sur la flèche, et celle-ci est dessinée en pointillée.  
+• Si le message asynchrone sert à détruire nouveau classifieur, le message *"«destroy»"* est annoté sur la flèche en trait plein, et une croix **X** est indiquée au bout de la ligne de vie ainsi détruite.
+* **Message retour** : Réponse à un message d'appel.  
+Représenté par une flèche en pointillée ouverte.
+
+Un dernier élément est ajouté pour représenté **le contrôle de flux d'activité**. Tant qu'un classifieur est **actif**, c'est à dire qu'il **exécute un processus** d'envoi ou de réponse à un message, sa ligne de vie est remplacée par un **fin rectangle blanc**, qui se termine lorsque le processus est terminé. Ainsi, la **longueur de ces rectangles** permet de comparer le temps qui prennent les différents processus dans une séquence d'évènements.
+
+Enfin, des sous-zones de diagramme d'interaction, appelées **fragments d'interaction**, peuvent permettre de modéliser des modulations dans la séquence d'évènements, selon l'**opérateur** choisi. Ces fragments sont représentés par un cadre, avec dans le coin supérieur gauche une étiquette qui indique le type d'opérateur utilisé :
+
+* **Loop** : Opérateur de boucle qui répète les messages tant que la condition de garde booléenne est vraie.  
+Représenté par terme *"loop"* dans l'étiquette suivi de la condition de la boucle ainsi qu'un compte minimum et maximum.
+* **Option** : Opérateur conditionnel, qui exécute son contenu seulement si la condition de garde est vraie.  
+Représenté par terme *"opt"* dans l'étiquette, et de la condition de garde entre crochet.
+* **Alternative** : Opérateur conditionnel proposant plusieurs sous-fragments en fonction de la condition de garde.  
+Représenté par le terme *"alt"* dans l'étiquette, avec une ligne en pointillé pour séparer chaque choix, et la condition écrite entre crochet *[]*.
+* **Parallel** : Opérateur possédant au moins deux sous-fragments exécutés simultanément.  
+Représenté par le terme *"par"* dans l'étiquette, avec une ligne en pointillé pour séparer chaque sous-fragment.
+* **Reference** : Opérateur spécial, permettant de faire référence à un autre diagramme d'interaction. Le cadre de l'opérateur doit couvrir toutes les lignes de vie utilisé dans l'interaction référencée.  
+Représenté par le terme *"ref"* dans l'étiquette, et le nom de l'interaction référencée à l'intérieur du cadre.
 
 ### Ressources
+[Wikipédia](https://en.wikipedia.org/wiki/Sequence_diagram) / [Agile Modeling](http://agilemodeling.com/artifacts/sequenceDiagram.htm) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-interaction#L7-3) / [uml-diagrams.org](https://www.uml-diagrams.org/sequence-diagrams.html)
         
 `,
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/sequence-diagram-1.jpg.webp'
+        ddiag: ''
     },
     {
         dname: 'Communication',
         dtag: 'uml-comm',
-        ddesc: 'Ce diagramme s’appelait auparavant le diagramme de collaboration, mais il est ensuite devenu un diagramme de communication. Le diagramme de communication est en quelque sorte similaire au diagramme de séquence, mais il se concentre davantage sur la relation des objets. Montrer comment ils se rapportent et se connectent via des messages dans une scène plutôt que des interactions.',
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/communication-diagram-1.jpg.webp'
+        ddesc: `
+### Description
+Anciennement appelé diagramme de collaboration, le diagramme de Communication permet de représenter les **interactions entre objets** en regardant les **messages** qu'ils s'envoient. En cela, il est une **version alternative et plus simple du [diagramme de Séquence](#uml-sequence)** puisqu'il retire la notion de temps qui s'écoule verticalement et permet d'agencer les différents éléments **librement dans l'espace**. C'est un diagramme qui s'utilise généralement en complément du [diagramme de Classes](#uml-cases), puisqu'il permet d'en visualiser le **comportement** dans le cadre d'un cas d'utilisation ayant pour but d'**accomplir un objectif** spécifique.
+
+### Mode d'emploi
+La **même notation que pour le [diagramme de Séquence](#uml-sequence)** est utilisée pour représentée les éléments qui vont interagir entre eux. Une relation entre deux éléments est représentée par un trait plein qui les relie.
+
+La représentation est aussi identique pour les messages, à l'exception qu'ici les **flèches sont annotées** au-dessus du trait de relation, accompagnées de la **liste des messages transmis**. Pour plus de précision, il est possible d'ajouter l'**ordre chronologique de la séquence** de messages en leur ajoutant un chiffre.
+
+### Ressources
+[Wikipédia](https://en.wikipedia.org/wiki/Communication_diagram) / [Agile Modeling](https://agilemodeling.com/artifacts/communicationDiagram.htm) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-interaction#L7-2)
+`,
+        ddiag: ''
     },
     {
         dname: 'Temps',
         dtag: 'uml-time',
-        ddesc: 'Un diagramme structurel qui représente le changement d’état ou de valeur d’un ou plusieurs objets sur un certain temps. Ce type de diagramme se compose principalement d’une ligne de vie, d’une chronologie d’état, d’une contrainte de durée, d’une contrainte de temps et d’une occurrence de destruction.',
-        ddiag: 'https://webusupload.apowersoft.info/gitmind/wp-content/uploads/2021/05/timing-diagram-1.jpg.webp'
+        ddesc: `
+### Description
+Le diagramme de Temps est utilisé pour représenté le **comportement d'objets** tout au long d'une certaine **période de temps**. C'est là aussi une **alternative plus simple du [diagramme de Séquence](#uml-sequence)**, à la différence que dans ce modèle l'axe temporel est inversé et le **temps s'écoule linéairement et horizontalement** de gauche à droite.
+
+### Mode d'emploi
+Deux types de notation sont possibles pour ce diagramme, concise et robuste, mais seule la **notation robuste** est détaillée ici.
+
+Commme pour tous les diagrammes d'interactions, il faut d'abord identifier les éléments qui participent à la **séquence d'évènements** et les représenter :
+* **Couloir** : Cadre d'observation de l'état d'un classifieur ainsi que des messages envoyés et reçus.  
+Représenté par un cadre avec le nom du classifieur inscrit à la verticale tout à gauche.
+* **États** : État discret du classifieur, pouvant être un attribut ou une condition à tester par exemple.  
+Représenté sous forme de liste à droit du nom du classifieur dans le couloir associé.
+* **Ligne temporelle** : Visualisation de l'évolution temporelle des états d'un classifieur.
+Représenté par une ligne pleine qui bouge de gauche à droite dans le temps, et de haut en bas en fonction des changements d'état.
+
+Afin de faire **évoluer la ligne temporelle** et les états de chaque classifieur, il faut rajouter les **messages** qui vont induire ces changements. Leur **notation est la même** que pour un [diagramme de Séquence](#uml-sequence), à l'exception qu'il point ainsi d'un **endroit particulier d'une ligne temporelle** sur un couloir vers un autre moment d'un autre couloir. Les messages sont donc ici les **déclencheurs** ou **stimuli** d'évènements qui vont faire évoluer les états des classifieurs. 
+
+Une **échelle de temps** est indiquée sur la bordure basse du couloir le plus bas, qui permet d'**analyser temporellement** la séquence d'évènement. Ainsi, les temps entre deux messages, ou la durée durant laquelle un objet reste bloqué dans un certain état peuvent être mesurés. Des **contraintes de durée** peuvent d'ailleurs être ajoutées pour spécifier certains le temps entre deux changements d'état non induits par un message par exemple.
+
+### Ressources
+[Wikipédia](https://en.wikipedia.org/wiki/Timing_diagram_(Unified_Modeling_Language)) / [Agile Modeling](http://agilemodeling.com/artifacts/timingDiagram.htm) / [uml-diagrams.org](https://www.uml-diagrams.org/timing-diagrams.html)
+`,
+        ddiag: ''
     }
   ]
 

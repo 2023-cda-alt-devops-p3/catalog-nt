@@ -187,6 +187,15 @@ ol ul li::before {
   width: 50%;
 }
 
+.App-sidebar h1 {
+  filter: drop-shadow(0 4px 4px #454545be);
+  font-size: calc(10px + 2vmin);
+  color: #454545;
+  padding-left: 30px;
+  text-align: left;  
+  font-size: calc(3px + 2vmin);
+}
+
 .logosb {
   display: flex;
   justify-content: center;
@@ -271,7 +280,7 @@ ol ul li::before {
   position: relative;
 }
 
-.dropdown .dropbtn {
+.dropdown .menu {
   font-size: 16px;
   border: none;
   outline: none;
@@ -283,7 +292,7 @@ ol ul li::before {
   margin: 0;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover, .dropdown:hover .menu {
   background-color: #E79057;
 }
 
@@ -327,11 +336,16 @@ ol ul li::before {
   .App-body ul {
     padding-left: 60px;
   }
+
+  .imgbox p {
+    padding-bottom: 0vh;
+  }
   .App-sidebar {
     width: 30vh;
     height: 100%;
     font-size: calc(3px + 2vmin);
     overflow-y: auto;
+    padding-left: 10px;
   }
 
   ul li {
