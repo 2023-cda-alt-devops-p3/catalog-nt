@@ -13,8 +13,10 @@ function DiagramCard({dname,dtag,ddesc,ddiag}) {
           <p><ReactMarkdown children={ddesc}></ReactMarkdown></p>
         </div>
         <div className='column'>
+          <div className='imgbox'>
           <img src={ddiag} alt={dname}></img>
-          <figcaption>Exemple de diagramme de {dname}</figcaption>
+          <p>Exemple de diagramme de {dname}</p>
+          </div>
       </div></div>
     </div>
   )

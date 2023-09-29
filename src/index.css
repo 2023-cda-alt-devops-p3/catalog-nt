@@ -49,19 +49,6 @@ html{
   max-width: 100%;
 }
 
-.App-body img {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  vertical-align: middle;
-  width: 100%; 
-}
-
-.App-body figcaption {
-  text-align: center;
-  font-style: italic;
-  margin-bottom: 20px;
-}
-
 .App-body p {
   font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   font-weight: 100;
@@ -109,6 +96,28 @@ html{
 .App-body ul {
   list-style: none;
   padding-left: 20px;
+}
+
+.imgbox img {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  vertical-align: middle;
+  width: 100%; 
+}
+
+.imgbox {
+  width: 100%;
+  background-color: white;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  margin-bottom: 25px;
+  justify-content: center;
+}
+
+.imgbox p {
+  text-align: center;
+  font-style: italic;
+  padding-bottom: 1vh;
+  font-family: 'SF Pro Text Light';
 }
 
 ul li {
@@ -349,10 +358,10 @@ ol ul li::before {
     font-size: calc(2vmin);
     margin-right: 1vw;
   }
-  .App-body img {
-    padding-left: 2vw;
+  .imgbox {
     width: 100%;
     max-width: max-content;
+    padding: 1vh 1vh 1vh 1vh;
   }
   .row {
     display: flex;
