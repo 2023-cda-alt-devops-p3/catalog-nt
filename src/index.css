@@ -345,18 +345,19 @@ ol ul li::before {
   html{
     scroll-padding-top: 10px;
   }
-
   .App-body{
     font-size: calc(2vmin);
     margin-right: 1vw;
   }
   .App-body img {
     padding-left: 2vw;
-    max-width: 60vh;
+    width: 100%;
+    max-width: max-content;
   }
   .row {
     display: flex;
     align-items: center;
+    justify-content: space-between;
   }
   .row:after {
     content: "";
