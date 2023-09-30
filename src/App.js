@@ -5,7 +5,7 @@ import ModalImage from 'react-modal-image';
 
 /* Diagramcard content automated builder from data file */
 
-function DiagramCard({dname,dtag,ddesc,ddiag}) {
+function DiagramCard({dname,dtag,ddesc,dimg,dcapt}) {
   return(
     <div>
       <li id={dtag}>{dname}</li>
@@ -15,8 +15,8 @@ function DiagramCard({dname,dtag,ddesc,ddiag}) {
         </div>
         <div className='column'>
           <div className='imgbox'>
-          <ModalImage  small={ddiag} medium={ddiag} alt={`Diagramme de ${dname}`} imageBackgroundColor='white'/><hr/>
-          <p>Exemple de diagramme de {dname}</p>
+          <ModalImage  small={dimg} medium={dimg} alt={`Diagramme de ${dname}`} imageBackgroundColor='white'/><hr/>
+          <p>{dcapt}</p>
           </div>
       </div></div>
     </div>
@@ -164,7 +164,8 @@ function AppContent() {
               dname={dcard.dname}
               dtag={dcard.dtag}
               ddesc={dcard.ddesc}
-              ddiag={dcard.ddiag}
+              dimg={dcard.dimg}
+              dcapt={dcard.dcapt}
           ></DiagramCard>))}
         </ol>
         <li id ='uml-behave' className="Section">Diagrammes comportementaux</li>
@@ -173,7 +174,8 @@ function AppContent() {
               dname={dcard.dname}
               dtag={dcard.dtag}
               ddesc={dcard.ddesc}
-              ddiag={dcard.ddiag}
+              dimg={dcard.dimg}
+              dcapt={dcard.dcapt}
           ></DiagramCard>))}
         </ol>
       </ul>
@@ -186,7 +188,7 @@ function AppContent() {
               dname={dcard.dname}
               dtag={dcard.dtag}
               ddesc={dcard.ddesc}
-              ddiag={dcard.ddiag}
+              dimg={dcard.dimg}
           ></DiagramCard>))}
         </ol>
         <li id='mer-orga' className="Section">Niveau organisationnel</li>
@@ -195,7 +197,7 @@ function AppContent() {
               dname={dcard.dname}
               dtag={dcard.dtag}
               ddesc={dcard.ddesc}
-              ddiag={dcard.ddiag}
+              dimg={dcard.dimg}
           ></DiagramCard>))}
         </ol>
         <li id='mer-logic' className="Section">Niveau logique</li>
@@ -204,7 +206,7 @@ function AppContent() {
               dname={dcard.dname}
               dtag={dcard.dtag}
               ddesc={dcard.ddesc}
-              ddiag={dcard.ddiag}
+              dimg={dcard.dimg}
           ></DiagramCard>))}
         </ol>
         <li id='mer-phys' className="Section">Niveau physique</li>
@@ -213,7 +215,7 @@ function AppContent() {
               dname={dcard.dname}
               dtag={dcard.dtag}
               ddesc={dcard.ddesc}
-              ddiag={dcard.ddiag}
+              dimg={dcard.dimg}
           ></DiagramCard>))}
         </ol>
       </ul>

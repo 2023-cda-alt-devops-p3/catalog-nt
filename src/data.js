@@ -42,7 +42,8 @@ A noter qu'en plus des classes, ce diagramme peut également représenter des **
 ### Ressources
 [Wikipedia](https://fr.wikipedia.org/wiki/Diagramme_de_classes) / [javapoint](https://www.javatpoint.com/uml-class-diagram) / [IBM](https://developer.ibm.com/articles/the-class-diagram/)
 `,
-        ddiag: require('./img/umlclass.webp')
+        dimg: require('./img/umlclass.webp'),
+        dcapt: 'Exemple de diagramme de classe pour un système de compte bancaire'
     },
     {
         dname: 'Composants',
@@ -69,7 +70,8 @@ Une autre notation des composants et sous-systèmes consistent en un rectangle a
 ### Ressources
 [IBM](https://developer.ibm.com/articles/the-component-diagram/) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-composants-deploiement#fig_composant_05)
 `,
-        ddiag: require('./img/umlcomponent.webp')
+        dimg: require('./img/umlcomponent.webp'),
+        dcapt: 'Exemple de diagramme de composant pour une commande en magasin'
     },
     {
         dname: 'Déploiement',
@@ -108,7 +110,8 @@ Représenté par un segment terminé par une flèche triangulaire vide pointant 
 [Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_de_d%C3%A9ploiement) / [Creately](https://creately.com/blog/fr/uncategorized-fr/tutoriel-sur-le-diagramme-de-deploiement/) / 
 [IBM](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-deployment) / [UML-diagrams.org](https://www.uml-diagrams.org/deployment-diagrams-overview.html)
 `,
-        ddiag: require('./img/umldeploy.webp')
+        dimg: require('./img/umldeploy.webp'),
+        dcapt: "Exemple de diagramme de déploiement pour l'utilisation d'un environnement web sur un serveur local"
     },
     {
         dname: 'Objets',
@@ -130,7 +133,8 @@ Un diagramme d'Objet peut être utilisé pour représenter une exception non pr�
 ### Ressources
 [Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_d%27objets) / [IBM](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-object) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-classes#L3-5)
 `,
-        ddiag: require('./img/umlobjects.webp')
+        dimg: require('./img/umlobjects.webp'),
+        dcapt: "Exemple de diagramme d'objets pour un système de compte bancaire"
     },
     {
         dname: 'Paquetage',
@@ -159,7 +163,8 @@ Il est possible de détailler encore plus chaque espace de nom en **listant les 
 ### Ressources
 [Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_des_paquetages) / [uml-diagrams.org](https://www.uml-diagrams.org/package-diagrams-overview.html)
 `,
-        ddiag: require('./img/umlpackage.webp')
+        dimg: require('./img/umlpackage.webp'),
+        dcapt: "Exemple de diagramme de paquetage pour un système multiple de vente par correspondance"
     },
     {
         dname: 'Structure composite',
@@ -184,7 +189,8 @@ Une **connection**, représentée par un **trait plein**, indique que les deux �
 ### Ressources
 [Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_de_structure_composite) / [IBM](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-composite-structure) / [uml-diagrams.org](https://www.uml-diagrams.org/composite-structure-diagrams.html)
 `,
-        ddiag:  require('./img/umlcomposite.webp')
+        dimg:  require('./img/umlcomposite.webp'),
+        dcapt: "Exemple de diagramme de structure composite pour le fonctionnement interne d'une guitare électrique"
     },
   ]
 
@@ -222,7 +228,8 @@ Des détails supplémentaires peuvent être rajoutés, comme la notion d'acteur 
 ### Ressources
 [Wikipédia](https://fr.wikipedia.org/wiki/Diagramme_de_cas_d%27utilisation) / [IBM](https://www.ibm.com/docs/en/rational-soft-arch/9.7.0?topic=diagrams-use-case) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-cas-utilisation#L2-4-4)
 `,
-        ddiag: require('./img/umlcases.webp')
+        dimg: require('./img/umlcases.webp'),
+        dcapt: "Exemple de diagramme de cas d'utilisation pour le fonctionnement d'un restaurant"
     },
     {
         dname: 'Activité',
@@ -259,7 +266,8 @@ Il est également possible de **partitionner** les noeuds d'activités en les re
 ### Resources
 [Wikipédia](https://en.wikipedia.org/wiki/Activity_diagram) / [Creately](https://creately.com/guides/activity-diagram-tutorial/) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-activites)
 `,
-        ddiag: require('./img/umlactivity.webp')
+        dimg: require('./img/umlactivity.webp'),
+        dcapt: "Exemple de diagramme d'activité pour un système de réservation de train"
     },
     {
         dname: 'État-transitions',
@@ -295,7 +303,8 @@ Une notion de **concurrence** peut rentrer en jeu lorsque, pour le même état i
 ### Ressources
 [Wikipédia](https://en.wikipedia.org/wiki/UML_state_machine) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagramme-etats-transitions#L5-6-5) / [Lucidchart](https://www.lucidchart.com/pages/uml-state-machine-diagram?)
 `,
-        ddiag: require('./img/umlstate.webp')
+        dimg: require('./img/umlstate.webp'),
+        dcapt: "Exemple de diagramme d'états-transitions pour l'enregistrement d'un voyageur à l'aéroport"
     },
     {
         dname: "Interactivité",
@@ -318,7 +327,8 @@ Les transitions entre les noeuds sont les mêmes que pour le [diagramme d'Activi
 ### Ressources
 [Wikipédia](https://en.wikipedia.org/wiki/Interaction_overview_diagram) / [Agile Modeling](http://agilemodeling.com/artifacts/interactionOverviewDiagram.htm)
 `,
-        ddiag: require('./img/umlinteract.webp')
+        dimg: require('./img/umlinteract.webp'),
+        dcapt: "Exemple de diagramme d'interactivité pour le choix d'un cours à l'université"
     },
     {
         dname: 'Séquence',
@@ -367,7 +377,8 @@ Représenté par le terme *"ref"* dans l'étiquette, et le nom de l'interaction 
 ### Ressources
 [Wikipédia](https://en.wikipedia.org/wiki/Sequence_diagram) / [Agile Modeling](http://agilemodeling.com/artifacts/sequenceDiagram.htm) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-interaction#L7-3) / [uml-diagrams.org](https://www.uml-diagrams.org/sequence-diagrams.html)     
 `,
-        ddiag: require('./img/umlsequence.webp')
+        dimg: require('./img/umlsequence.webp'),
+        dcapt: "Exemple de diagramme de séquence pour un appel téléphonique"
     },
     {
         dname: 'Communication',
@@ -384,7 +395,8 @@ La représentation est aussi identique pour les messages, à l'exception qu'ici 
 ### Ressources
 [Wikipédia](https://en.wikipedia.org/wiki/Communication_diagram) / [Agile Modeling](https://agilemodeling.com/artifacts/communicationDiagram.htm) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-interaction#L7-2)
 `,
-        ddiag: require('./img/umlcomm.webp')
+        dimg: require('./img/umlcomm.webp'),
+        dcapt: "Exemple de diagramme de communication pour une boutique en ligne"
     },
     {
         dname: 'Temps',
@@ -411,7 +423,8 @@ Une **échelle de temps** est indiquée sur la bordure basse du couloir le plus 
 ### Ressources
 [Wikipédia](https://en.wikipedia.org/wiki/Timing_diagram_(Unified_Modeling_Language)) / [Agile Modeling](http://agilemodeling.com/artifacts/timingDiagram.htm) / [uml-diagrams.org](https://www.uml-diagrams.org/timing-diagrams.html)
 `,
-        ddiag: require('./img/umltime.webp')
+        dimg: require('./img/umltime.webp'),
+        dcapt: "Exemple de diagramme de temps pour une machine à café"
     }
   ]
 
@@ -420,13 +433,13 @@ Une **échelle de temps** est indiquée sur la bordure basse du couloir le plus 
         dname: 'Modèle Conceptuel des Données (MCD)',
         dtag: 'mer-mcd',
         ddesc: 'Le MCD est axé sur la modélisation des données et de leurs relations dans le système. Il utilise des concepts tels que les entités (objets), les attributs (propriétés), et les relations pour représenter la structure des données. Par exemple, dans un MCD pour une bibliothèque, vous auriez des entités telles que "Livre", "Auteur", "Emprunteur", et des relations comme "Emprunter" entre elles.',
-        ddiag: 'https://www.prospection-ciblee.com/wp-content/uploads/2021/06/exemple-MCD.jpg'
+        dimg: 'https://www.prospection-ciblee.com/wp-content/uploads/2021/06/exemple-MCD.jpg'
     },
     {
         dname: 'Modèle Conceptuel de Traitements (MCT)',
         dtag: 'mer-mct',
         ddesc: "Le MDT décrit les fonctions, les processus ou les traitements qui sont exécutés par le système. Il indique comment les données sont transformées d'un état à un autre. Chaque traitement est documenté avec ses règles, ses entrées, ses sorties et ses dépendances.",
-        ddiag: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/MCT_des_contributions_wiki.png'
+        dimg: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/MCT_des_contributions_wiki.png'
     }
 ]
 
@@ -435,13 +448,13 @@ export const dataMERO = [
         dname: 'Modèle Organisationnel des Données (MOD)',
         dtag: 'mer-mod',
         ddesc: "Le MOD se concentre sur la manière dont les données sont stockées physiquement. Il spécifie les tables de la base de données, les clés primaires et étrangères, les index, les contraintes d'intégrité, etc. Il est essentiel pour la conception technique de la base de données.",
-        ddiag: 'https://www.cours-exercices-pdf.com/images/Merise-Modle-conceptuel-et-modle-organisationnel-des-donnes.jpg'
+        dimg: 'https://www.cours-exercices-pdf.com/images/Merise-Modle-conceptuel-et-modle-organisationnel-des-donnes.jpg'
     },
     {
         dname: 'Modèle Organisationnel de Traitements (MOT)',
         dtag: 'mer-mot',
         ddesc: "Le modèle conceptuel des traitements permet de traiter la dynamique du système d'information, c'est-à-dire les opérations qui sont réalisées en fonction d'événements. Ce modèle permet donc de représenter de façon schématique l'activité d'un système d'information sans faire référence à des choix organisationnels ou des moyens d'exécution, c'est-à-dire qu'il permet de définir simplement ce qui doit être fait, mais il ne dit pas quand, comment ni où.",
-        ddiag: 'http://commentcamarche.chez.com/info/bdd/images/mctschem.gif'
+        dimg: 'http://commentcamarche.chez.com/info/bdd/images/mctschem.gif'
     }
 ]
 
@@ -450,13 +463,13 @@ export const dataMERL = [
         dname: 'Modèle Logique des Données (MLD)',
         dtag: 'mer-mld',
         ddesc: 'La traduction du MCD vers le MLD a pour but de rendre plus clair les liaisons entre les entités. Le MLD permet de mettre en évidence les associations n,n qui donnent alors naissance à des entités à part entière. Il permet aussi de mettre en évidence les clés étrangères et donc les interactions entre les entités. La construction du MLD se fait à partir de la lecture du MCD. Chaque Entité donne une ligne où l’on détaille la clé primaire par le nom de l’attribut qui sera alors souligné. Les clés étrangères sont identifiées par un # avant le nom de l’attribut.',
-        ddiag: 'https://www.it-connect.fr/wp-content-itc/uploads/2013/08/Sans-titre2-600x163.png'
+        dimg: 'https://www.it-connect.fr/wp-content-itc/uploads/2013/08/Sans-titre2-600x163.png'
     },
     {
         dname: 'Modèle Logique de Traitements (MLT)',
         dtag: 'mer-mlt',
         ddesc: 'Le modèle logique de traitement se préoccupe d’une vision interne des moyens que l’informaticien va utiliser pour construire le logiciel correspondant aux activités informatisées définit dans le MOT. Ce modèle logique de traitement MLT doit spécifier avec rigueur et en détail des contenues des traitements informatisés associes a chaque taches organisationnelle.',
-        ddiag: 'https://www.institut-numerique.org/wp-content/uploads/2012/07/Figure-35-CONCEPTION-D%E2%80%99UN-SYSTEME-INFORMATISE-DE-RESERVATION-DES-CHAMBRES-DANS-UN-HOTEL-Cas-de-PEACE-HOTEL-Goma.jpg'
+        dimg: 'https://www.institut-numerique.org/wp-content/uploads/2012/07/Figure-35-CONCEPTION-D%E2%80%99UN-SYSTEME-INFORMATISE-DE-RESERVATION-DES-CHAMBRES-DANS-UN-HOTEL-Cas-de-PEACE-HOTEL-Goma.jpg'
     }
 ]
 
@@ -465,6 +478,6 @@ export const dataMERP = [
         dname: 'Modèle Physique des Données (MPD)',
         dtag: 'mer-mpd',
         ddesc: "Le MPT décrit la planification des tâches et des processus du système. Il permet de modéliser les dépendances entre les tâches, les horaires d'exécution, les priorités, et facilite la gestion des flux de travail et des processus automatisés.",
-        ddiag: 'https://help.sap.com/doc/5cf5d195c910456fb4b080f9f6219c6d/16.7.07/fr-FR/loioc77b95036e1b10149005cda7baa26136_LowRes.gif'
+        dimg: 'https://help.sap.com/doc/5cf5d195c910456fb4b080f9f6219c6d/16.7.07/fr-FR/loioc77b95036e1b10149005cda7baa26136_LowRes.gif'
     }
 ]
