@@ -105,11 +105,15 @@ html{
 }
 
 .imgbox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   background-color: white;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   margin-bottom: 25px;
-  justify-content: center;
 }
 
 .imgbox p {
@@ -117,6 +121,10 @@ html{
   font-style: italic;
   padding-bottom: 1vh;
   font-family: 'SF Pro Text Light';
+}
+
+.imgbox hr{
+  width: 100%;
 }
 
 ul li {
@@ -372,8 +380,6 @@ ol ul li::before {
     margin-right: 1vw;
   }
   .imgbox {
-    width: 100%;
-    max-width: max-content;
     padding: 1vh 1vh 1vh 1vh;
   }
   .row {
