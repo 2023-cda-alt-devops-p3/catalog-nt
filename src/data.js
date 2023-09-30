@@ -299,7 +299,7 @@ Une notion de **concurrence** peut rentrer en jeu lorsque, pour le même état i
     },
     {
         dname: "Interactivité",
-        dtag: 'uml-interactions',
+        dtag: 'uml-interact',
         ddesc: `
 ### Description
 Un diagramme d'Interactivité, aussi appelé **diagramme global d'interactions**, est une variante au [diagramme d'Activité](#uml-activity) dans le sens où il représente lui aussi une **séquence d'actions** sous forme d'un flux de travail. La différence se trouve dans le fait que les noeuds du diagrammes ne sont pas des actions normales, mais sont des **cadres** représentant des **sous-digrammes d'interaction**.  Le diagramme d'Interactivité peut être alors utile pour **déconstruire un scénario complexe**, qui demanderait trop de chemins conditionnels si l'on utilisait un seul diagramme simple d'interaction.
@@ -311,14 +311,14 @@ Dans la majorité des cas, le diagramme global d'interaction est lui-même un di
 * **[Diagramme de Communication](#uml-comm)** (**cd**).
 * **[Diagramme de Temps](#uml-time)** (**td**).
 
-Ils sont représentés par un cadre, avec une étiquette dans le coin supérieur gauche contenant les **initiales** du type de diagramme d'interaction utilisé suivies de son nom. Le contenu des cadres est détaillé pour chaque diagrammes dans son propre chapitre du catalogue.
+Ils sont représentés par un cadre, avec une étiquette dans le coin supérieur gauche contenant les **initiales** du type de diagramme d'interaction utilisé suivies de son nom. Le contenu des cadres est détaillé pour chaque diagrammes dans son propre chapitre du catalogue. Si le contenu n'est pas **détaillé**, la notation **ref** peut être inscrite dans l'étiquette afin de renvoyer vers une documentation précise du sous-diagramme.
 
 Les transitions entre les noeuds sont les mêmes que pour le [diagramme d'Activité](#uml-activity), avec les embranchements de **décision**, **fusion**, **bifurcation**, et **union**. Il faut également un **noeud initial et final** pour décrire où démarre et termine le flux.
 
 ### Ressources
 [Wikipédia](https://en.wikipedia.org/wiki/Interaction_overview_diagram) / [Agile Modeling](http://agilemodeling.com/artifacts/interactionOverviewDiagram.htm)
 `,
-        ddiag: ''
+        ddiag: require('./img/umlinteract.webp')
     },
     {
         dname: 'Séquence',
@@ -365,8 +365,7 @@ Représenté par le terme *"par"* dans l'étiquette, avec une ligne en pointill�
 Représenté par le terme *"ref"* dans l'étiquette, et le nom de l'interaction référencée à l'intérieur du cadre.
 
 ### Ressources
-[Wikipédia](https://en.wikipedia.org/wiki/Sequence_diagram) / [Agile Modeling](http://agilemodeling.com/artifacts/sequenceDiagram.htm) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-interaction#L7-3) / [uml-diagrams.org](https://www.uml-diagrams.org/sequence-diagrams.html)
-        
+[Wikipédia](https://en.wikipedia.org/wiki/Sequence_diagram) / [Agile Modeling](http://agilemodeling.com/artifacts/sequenceDiagram.htm) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-interaction#L7-3) / [uml-diagrams.org](https://www.uml-diagrams.org/sequence-diagrams.html)     
 `,
         ddiag: require('./img/umlsequence.webp')
     },
@@ -385,7 +384,7 @@ La représentation est aussi identique pour les messages, à l'exception qu'ici 
 ### Ressources
 [Wikipédia](https://en.wikipedia.org/wiki/Communication_diagram) / [Agile Modeling](https://agilemodeling.com/artifacts/communicationDiagram.htm) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-interaction#L7-2)
 `,
-        ddiag: ''
+        ddiag: require('./img/umlcomm.webp')
     },
     {
         dname: 'Temps',
@@ -412,7 +411,7 @@ Une **échelle de temps** est indiquée sur la bordure basse du couloir le plus 
 ### Ressources
 [Wikipédia](https://en.wikipedia.org/wiki/Timing_diagram_(Unified_Modeling_Language)) / [Agile Modeling](http://agilemodeling.com/artifacts/timingDiagram.htm) / [uml-diagrams.org](https://www.uml-diagrams.org/timing-diagrams.html)
 `,
-        ddiag: ''
+        ddiag: require('./img/umltime.webp')
     }
   ]
 
