@@ -368,7 +368,7 @@ Représenté par le terme *"ref"* dans l'étiquette, et le nom de l'interaction 
 [Wikipédia](https://en.wikipedia.org/wiki/Sequence_diagram) / [Agile Modeling](http://agilemodeling.com/artifacts/sequenceDiagram.htm) / [Developpez.com](https://laurent-audibert.developpez.com/Cours-UML/?page=diagrammes-interaction#L7-3) / [uml-diagrams.org](https://www.uml-diagrams.org/sequence-diagrams.html)
         
 `,
-        ddiag: ''
+        ddiag: require('./img/umlsequence.webp')
     },
     {
         dname: 'Communication',
