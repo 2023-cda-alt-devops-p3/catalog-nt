@@ -1,22 +1,12 @@
 /* importing custom fonts */
 @font-face {
 	font-family: 'SF Pro Dislay Regular';
-	src: url(./fonts/SF-Pro-Text-Light.otf) format("opentype");
+	src: url(./fonts/SFPRODISPLAYREGULAR.OTF) format("opentype");
   font-display: swap;
 }
 @font-face {
   font-family: 'SF Pro Dislay Bold';
   src: url(./fonts/SFPRODISPLAYBOLD.OTF) format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: 'SF Pro Text Medium';
-  src: url(./fonts/SF-Pro-Text-Medium.otf) format("opentype");
-  font-display: swap;
-}
-@font-face {
-  font-family: 'SF Pro Text Light';
-  src: url(./fonts/SF-Pro-Text-Light.otf) format("opentype");
   font-display: swap;
 }
 
@@ -85,11 +75,7 @@ html{
 
 .App-body h3 {
   font-family: 'SF Pro Dislay Bold';
-  margin-bottom: 5px;
-}
-
-.App-body h4 {
-  font-family: 'SF Pro Dislay Bold';
+  font-size: calc(10px + 2.5vmin);
   margin-bottom: 5px;
 }
 
@@ -120,7 +106,7 @@ html{
   text-align: center;
   font-style: italic;
   padding-bottom: 1vh;
-  font-family: 'SF Pro Text Light';
+  font-family: 'SF Pro Dislay Regular';
 }
 
 .imgbox hr{
@@ -183,7 +169,7 @@ ol ul li::before {
   margin: 0;
   padding: 0;
   width: 0vh;
-  font-family: 'SF Pro Text Light';
+  font-family: 'SF Pro Dislay Regular';
   position: fixed;
   display: flex;
   flex-direction: column;
@@ -244,14 +230,14 @@ ol ul li::before {
 }
 
 .sideTitle {
-  font-family: 'SF Pro Text Medium';
-  color: #a1a1a1;
+  font-family: 'SF Pro Dislay Bold';
+  color: #454545;
   margin-left: 25px;
   text-decoration: none;
 }
 
 .sideMenu {
-  font-family: 'SF Pro Text Medium';
+  font-family: 'SF Pro Dislay Regular';
   display:block;
   color: #454545;
   padding: 2px;
@@ -261,7 +247,7 @@ ol ul li::before {
 /* topbar */
 .App-topbar {
   background-color: #333;
-  font-family: 'SF Pro Text Light';
+  font-family: 'SF Pro Dislay Regular';
   width: 100%;
   top: 0;
   height: 10vh;
@@ -272,13 +258,18 @@ ol ul li::before {
   z-index: 1;
 }
 
+.App-topbar .sideTitle {
+  font-family: 'SF Pro Dislay Bold';
+  margin-left: 0px;
+}
+
 .logotb {
  margin-right: 20px;
 }
 
 .App-topbar a {
   float: left;
-  font-size: 16px;
+  font-size: 20px;
   color: white;
   text-align: center;
   text-decoration: none;
@@ -308,7 +299,7 @@ ol ul li::before {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 200px;
+  min-width: 250px;
   box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
 }
@@ -343,6 +334,10 @@ ol ul li::before {
   }
   .App-body ul {
     padding-left: 60px;
+  }
+
+  .App-body h3 {
+    font-size: calc(5px + 2vmin);
   }
 
   .imgbox p {

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import {dataUMLS,dataUMLC,dataMERC,dataMERO,dataMERL,dataMERP} from './data.js'; /*data containing diagrams infos*/
+import {dataUMLS,dataUMLC,dataMERC,dataMERL,dataMERP} from './data.js'; /*data containing diagrams infos*/
 import ReactMarkdown from 'react-markdown'
 import ModalImage from 'react-modal-image';
 
@@ -64,12 +64,7 @@ function Sidebar() {
       data={dataMERC}
     ></Accordion>
     <Accordion
-      title = 'Niveau organisationnel'
-      titlehref= '#mer-orga'
-      data={dataMERO}
-    ></Accordion>
-    <Accordion
-      title = 'Niveau logique'
+      title = 'Niveau organisationnel / logique'
       titlehref= '#mer-logic'
       data={dataMERL}
     ></Accordion>
@@ -95,13 +90,12 @@ function Topbar() {
         <path d="M0 60H100V80H0z" fill="white"></path>
       </svg></button>
       <div className="dropdown-content">
-        <a className='sideMenu' href='#uml'>Diagrammes UML</a>
+        <a className='sideTitle' href='#uml'>Diagrammes UML</a>
         <a href='#uml-structure'>Diag. de structure</a>
         <a href='#uml-behave'>Diag. comportement</a>
-        <a className='sideMenu' href='#mer'>Diagrammes MERISE</a>
+        <a className='sideTitle' href='#mer'>Diagrammes MERISE</a>
         <a href='#mer-concept'>Mod. conceptuel</a> 
-        <a href='#mer-orga'>Mod. organisationnel</a> 
-        <a href='#mer-logic'>Mod. logique</a> 
+        <a href='#mer-logic'>Mod. orga. / logique</a> 
         <a href='#mer-phys'>Mod. physique</a>
       </div>
     </div>
@@ -191,16 +185,7 @@ function AppContent() {
               dimg={dcard.dimg}
           ></DiagramCard>))}
         </ol>
-        <li id='mer-orga' className="Section">Niveau organisationnel</li>
-        <ol>
-        {dataMERO.map(dcard => (<DiagramCard
-              dname={dcard.dname}
-              dtag={dcard.dtag}
-              ddesc={dcard.ddesc}
-              dimg={dcard.dimg}
-          ></DiagramCard>))}
-        </ol>
-        <li id='mer-logic' className="Section">Niveau logique</li>
+        <li id='mer-logic' className="Section">Niveau organisationnel / logique</li>
         <ol>
         {dataMERL.map(dcard => (<DiagramCard
               dname={dcard.dname}

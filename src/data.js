@@ -433,43 +433,27 @@ Une **échelle de temps** est indiquée sur la bordure basse du couloir le plus 
         dname: 'Modèle Conceptuel des Données (MCD)',
         dtag: 'mer-mcd',
         ddesc: 'Le MCD est axé sur la modélisation des données et de leurs relations dans le système. Il utilise des concepts tels que les entités (objets), les attributs (propriétés), et les relations pour représenter la structure des données. Par exemple, dans un MCD pour une bibliothèque, vous auriez des entités telles que "Livre", "Auteur", "Emprunteur", et des relations comme "Emprunter" entre elles.',
-        dimg: 'https://www.prospection-ciblee.com/wp-content/uploads/2021/06/exemple-MCD.jpg'
+        dimg: ''
     },
     {
         dname: 'Modèle Conceptuel de Traitements (MCT)',
         dtag: 'mer-mct',
         ddesc: "Le MDT décrit les fonctions, les processus ou les traitements qui sont exécutés par le système. Il indique comment les données sont transformées d'un état à un autre. Chaque traitement est documenté avec ses règles, ses entrées, ses sorties et ses dépendances.",
-        dimg: 'https://upload.wikimedia.org/wikipedia/commons/9/9d/MCT_des_contributions_wiki.png'
+        dimg: ''
     }
 ]
-
-export const dataMERO = [
-    {
-        dname: 'Modèle Organisationnel des Données (MOD)',
-        dtag: 'mer-mod',
-        ddesc: "Le MOD se concentre sur la manière dont les données sont stockées physiquement. Il spécifie les tables de la base de données, les clés primaires et étrangères, les index, les contraintes d'intégrité, etc. Il est essentiel pour la conception technique de la base de données.",
-        dimg: 'https://www.cours-exercices-pdf.com/images/Merise-Modle-conceptuel-et-modle-organisationnel-des-donnes.jpg'
-    },
-    {
-        dname: 'Modèle Organisationnel de Traitements (MOT)',
-        dtag: 'mer-mot',
-        ddesc: "Le modèle conceptuel des traitements permet de traiter la dynamique du système d'information, c'est-à-dire les opérations qui sont réalisées en fonction d'événements. Ce modèle permet donc de représenter de façon schématique l'activité d'un système d'information sans faire référence à des choix organisationnels ou des moyens d'exécution, c'est-à-dire qu'il permet de définir simplement ce qui doit être fait, mais il ne dit pas quand, comment ni où.",
-        dimg: 'http://commentcamarche.chez.com/info/bdd/images/mctschem.gif'
-    }
-]
-
 export const dataMERL = [
     {
         dname: 'Modèle Logique des Données (MLD)',
         dtag: 'mer-mld',
         ddesc: 'La traduction du MCD vers le MLD a pour but de rendre plus clair les liaisons entre les entités. Le MLD permet de mettre en évidence les associations n,n qui donnent alors naissance à des entités à part entière. Il permet aussi de mettre en évidence les clés étrangères et donc les interactions entre les entités. La construction du MLD se fait à partir de la lecture du MCD. Chaque Entité donne une ligne où l’on détaille la clé primaire par le nom de l’attribut qui sera alors souligné. Les clés étrangères sont identifiées par un # avant le nom de l’attribut.',
-        dimg: 'https://www.it-connect.fr/wp-content-itc/uploads/2013/08/Sans-titre2-600x163.png'
+        dimg: ''
     },
     {
         dname: 'Modèle Logique de Traitements (MLT)',
         dtag: 'mer-mlt',
         ddesc: 'Le modèle logique de traitement se préoccupe d’une vision interne des moyens que l’informaticien va utiliser pour construire le logiciel correspondant aux activités informatisées définit dans le MOT. Ce modèle logique de traitement MLT doit spécifier avec rigueur et en détail des contenues des traitements informatisés associes a chaque taches organisationnelle.',
-        dimg: 'https://www.institut-numerique.org/wp-content/uploads/2012/07/Figure-35-CONCEPTION-D%E2%80%99UN-SYSTEME-INFORMATISE-DE-RESERVATION-DES-CHAMBRES-DANS-UN-HOTEL-Cas-de-PEACE-HOTEL-Goma.jpg'
+        dimg: ''
     }
 ]
 
@@ -478,6 +462,12 @@ export const dataMERP = [
         dname: 'Modèle Physique des Données (MPD)',
         dtag: 'mer-mpd',
         ddesc: "Le MPT décrit la planification des tâches et des processus du système. Il permet de modéliser les dépendances entre les tâches, les horaires d'exécution, les priorités, et facilite la gestion des flux de travail et des processus automatisés.",
-        dimg: 'https://help.sap.com/doc/5cf5d195c910456fb4b080f9f6219c6d/16.7.07/fr-FR/loioc77b95036e1b10149005cda7baa26136_LowRes.gif'
+        dimg: ''
+    },
+    {
+        dname: 'Modèle Opérationnel de Traitement (MOT)',
+        dtag: 'mer-mot',
+        ddesc: "Un modèle opérationnel de traitement représente la manière dont les opérations ou les activités seront effectuées dans le système d'information. Il se concentre sur les processus, les flux de données, les règles métier et les interactions entre les différentes entités impliquées dans le système.  Il sert de base pour la conception détaillée du système et est un élément clé de la phase de modélisation fonctionnelle dans la méthodologie MERISE.",
+        dimg: ''
     }
 ]
