@@ -59,7 +59,7 @@ Demo : https://catalog-nt.netlify.app/
 - [:heavy_check_mark:] Versionné régulièrement et de manière atomique (Plusieurs "commit" par jour pendant toute la durée du projet) => Vérif Git
 - [:heavy_check_mark:] Historique de commit propre => (éviter les doublons, les commits inutiles)
 - [:heavy_check_mark:] Mise en plance d'une branche de développement supplémentaire, voire plusieurs selon l'architecture du site => Vérif sur Git
-- [:x:] Fonction "pull request" => Check sur Github
+- [:heavy_check_mark:] Fonction "pull request" => Check sur Github
 - [:x:] Mise en place un Github Action (automatisation de tests intégration, vulnérabilité, ...) => Check sur Github
 
 ## Sécurité
