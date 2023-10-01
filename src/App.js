@@ -95,10 +95,10 @@ function Topbar() {
         <path d="M0 60H100V80H0z" fill="white"></path>
       </svg></button>
       <div className="dropdown-content">
-        <a className='sideMenu' href='#uml'>Diagrammes UML</a>
+        <a className='sideTitle' href='#uml'>Diagrammes UML</a>
         <a href='#uml-structure'>Diag. de structure</a>
         <a href='#uml-behave'>Diag. comportement</a>
-        <a className='sideMenu' href='#mer'>Diagrammes MERISE</a>
+        <a className='sideTitle' href='#mer'>Diagrammes MERISE</a>
         <a href='#mer-concept'>Mod. conceptuel</a> 
         <a href='#mer-orga'>Mod. organisationnel</a> 
         <a href='#mer-logic'>Mod. logique</a> 
